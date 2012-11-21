@@ -2,17 +2,13 @@
 # -*- coding: utf-8 -*-
 
 OUTPUT_FILE = 'output.gexf'
-
 ENDPOINT = "http://dbpedia.org/sparql"
-
 QUERY = '''
   SELECT ?band_uri, ?genre_uri
-
   WHERE {
     ?band_uri a <http://dbpedia.org/ontology/Band> ;
-      dbpedia-owl:genre ?genre_uri .
+    dbpedia-owl:genre ?genre_uri .
   }
-
   LIMIT 1000
 '''
 
