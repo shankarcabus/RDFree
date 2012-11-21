@@ -1,0 +1,20 @@
+[rdf.plugins.resultparser]
+xml = rdfextras.sparql.results.xmlresults:XMLResultParser
+json = rdfextras.sparql.results.jsonresults:JSONResultParser
+
+[rdf.plugins.queryresult]
+sparql = rdfextras.sparql.query:SPARQLQueryResult
+
+[console_scripts]
+rdf2dot = rdfextras.tools.rdf2dot:main
+csv2rdf = rdfextras.tools.csv2rdf:main
+rdfpipe = rdfextras.tools.rdfpipe:main
+rdfs2dot = rdfextras.tools.rdfs2dot:main
+
+[rdf.plugins.queryprocessor]
+sparql = rdfextras.sparql.processor:Processor
+
+[rdf.plugins.resultserializer]
+xml = rdfextras.sparql.results.xmlresults:XMLResultSerializer
+json = rdfextras.sparql.results.jsonresults:JSONResultSerializer
+

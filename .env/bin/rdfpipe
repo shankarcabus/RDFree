@@ -1,0 +1,9 @@
+#!/Users/shankar/Workspaces/gashan-py/.env/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'rdfextras==0.3','console_scripts','rdfpipe'
+__requires__ = 'rdfextras==0.3'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('rdfextras==0.3', 'console_scripts', 'rdfpipe')()
+)
