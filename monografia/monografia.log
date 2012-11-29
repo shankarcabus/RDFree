@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.9.7)  21 NOV 2012 06:13
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.9.7)  29 NOV 2012 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,13 +661,9 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 87.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 92.
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 92.
  [1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1]
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 130.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 154.
  [2]
@@ -696,7 +692,10 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24.88> not available
 
  [6
 
-] (./monografia.toc)
+] (./monografia.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 2.
+)
 \tf@toc=\write7
 \openout7 = `monografia.toc'.
 
@@ -707,9 +706,6 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24.88> not available
 
  (./introducao.tex
 Cap\'{\i }tulo 1.
-
-LaTeX Warning: Citation `wikipedia2012' on page 8 undefined on input line 7.
-
 [8
 
 
@@ -748,25 +744,25 @@ Cap\'{\i }tulo 2.
 Cap\'{\i }tulo 3.
 [12
 
-] <images/SemanticWebImport1.png, id=54, 663.47874pt x 407.5225pt>
+] [13] <images/SemanticWebImport1.png, id=57, 663.47874pt x 407.5225pt>
 File: images/SemanticWebImport1.png Graphic file (type png)
 
 <use images/SemanticWebImport1.png>
-Package pdftex.def Info: images/SemanticWebImport1.png used on input line 35.
+Package pdftex.def Info: images/SemanticWebImport1.png used on input line 36.
 (pdftex.def)             Requested size: 464.43195pt x 285.2638pt.
 
-Overfull \hbox (9.18784pt too wide) in paragraph at lines 35--36
+Overfull \hbox (9.18784pt too wide) in paragraph at lines 36--37
  [] 
  []
 
-[13] <images/welkin.png, id=58, 801.99625pt x 593.21625pt>
+<images/welkin.png, id=58, 801.99625pt x 593.21625pt>
 File: images/welkin.png Graphic file (type png)
-
-<use images/welkin.png>
-Package pdftex.def Info: images/welkin.png used on input line 46.
+ <use images/welkin.png>
+Package pdftex.def Info: images/welkin.png used on input line 47.
 (pdftex.def)             Requested size: 441.09929pt x 326.26994pt.
- [14 <./images/SemanticWebImport1.png>]
-Overfull \hbox (223.23996pt too wide) in paragraph at lines 70--85
+
+[14 <./images/SemanticWebImport1.png>]
+Overfull \hbox (6.12653pt too wide) in paragraph at lines 66--81
  [] 
  []
 
@@ -775,14 +771,14 @@ Overfull \hbox (223.23996pt too wide) in paragraph at lines 70--85
 File: images/arquitetura.png Graphic file (type png)
 
 <use images/arquitetura.png>
-Package pdftex.def Info: images/arquitetura.png used on input line 95.
+Package pdftex.def Info: images/arquitetura.png used on input line 123.
 (pdftex.def)             Requested size: 470.75554pt x 324.61052pt.
 
-Overfull \hbox (15.51143pt too wide) in paragraph at lines 95--96
+Overfull \hbox (15.51143pt too wide) in paragraph at lines 123--124
  [] 
  []
 
-[16 <./images/arquitetura.png>]
+[16] [17 <./images/arquitetura.png>]
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
@@ -791,9 +787,8 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 1.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [17]
-(./exemplo.txt) [18]
-(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
+)) (./exemplo.txt
+[18]) (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -802,14 +797,14 @@ File: lstlang2.sty 2004/09/05 1.3 listings language file
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2004/09/05 1.3 listings language file
 )
-(./sparql.txt) (./config.txt [19])
+(./sparql.txt [19]) (./config.txt)
 <images/rede_semantica.png, id=82, 1027.84pt x 1027.84pt>
 File: images/rede_semantica.png Graphic file (type png)
 
 <use images/rede_semantica.png>
-Package pdftex.def Info: images/rede_semantica.png used on input line 185.
+Package pdftex.def Info: images/rede_semantica.png used on input line 213.
 (pdftex.def)             Requested size: 411.12872pt x 411.12872pt.
-) [20 <./images/rede_semantica.png>] [21]
+ [20]) [21 <./images/rede_semantica.png>]
 (./monografia.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 8.
@@ -830,27 +825,23 @@ This document will not have a glossary.
 [22
 
 
-] (./monografia.aux (./introducao.aux) (./projeto.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] (./monografia.aux (./introducao.aux) (./projeto.aux)) ) 
 Here is how much of TeX's memory you used:
- 10336 strings out of 493488
- 150342 string characters out of 3141327
- 293781 words of memory out of 3000000
- 13325 multiletter control sequences out of 15000+200000
- 59217 words of font info for 67 fonts, out of 3000000 for 9000
+ 10331 strings out of 493488
+ 150266 string characters out of 3141327
+ 294485 words of memory out of 3000000
+ 13322 multiletter control sequences out of 15000+200000
+ 55353 words of font info for 64 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 61i,10n,96p,1449b,1744s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on monografia.pdf (23 pages, 2053818 bytes).
+ 61i,10n,96p,1449b,1764s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/20
+12/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2012/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fo
+nts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/time
+s/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on monografia.pdf (23 pages, 2053789 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
