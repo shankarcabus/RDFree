@@ -22,3 +22,4 @@ etc/*.pid
 */bat
 *.tmp
 *.aux
+*.bat
