@@ -1,0 +1,307 @@
+\chapter{Aspectos dos Efeitos Sonoros e Plataforma iOS}
+\label{cap:somprocessamentoefeitos}
+Este capítulo está dividido em duas partes principais: os efeitos sonoros e a plataforma iOS. Primeiramente, serão abordados exemplos de efeitos sonoros, mas, para melhor compreensão, é necessário permear por duas áreas de conhecimento: som e processamento de sinais. Os conceitos e as propriedades do som serão vistos na seção \ref{sec:propriedadesdosom}. Em seguida, na seção \ref{sec:processamentosinais} serão demonstradas as técnicas utilizadas no processamento de sinais. E, para finalizar a primeira parte, será explicado o funcionamento dos efeitos sonoros. 
+
+Na seção \ref{sec:plataforma} está a segunda parte do capítulo, onde serão apresentados a plataforma iOS e as suas especificidades, tais como: a arquitetura do Sistema Operacional, o funcionamento de áudio e os conectores para os dispositivos iOS. 
+
+%----------------------------------- SEÇÃO PROPRIEDADES DO SOM ----------------------------------------------
+
+\section{Propriedades do Som}
+\label{sec:propriedadesdosom}
+O som pode ser definido como uma forma de propagação em meios sólidos, líquidos ou gasosos de uma compressão mecânica ou onda longitudinal \cite{ferreira}.  Quando há uma massa de ar deslocada com velocidade suficiente, esta produzirá um som. Fisicamente o som possui as seguintes propriedades: duração, intensidade, altura e timbre.
+
+
+A duração compreende o tempo durante o qual é produzido \cite{lacerda}.  Na Figura \ref{fig:duracao} pode se observar que as ondas A, B e C possuem, quando comparadas, a duração curta, média e longa respectivamente. 
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{longitude.jpg}
+\caption[Duração das ondas sonoras]{Duração das ondas sonoras \cite{oscrove}}
+\label{fig:duracao}
+\end{figure}
+
+Segundo \citeonline{ferreira}, a intensidade, também chamada de amplitude, é definida como a distância em formato de onda da origem até a parte mais elevada na direção vertical. A unidade utilizada para medir a intensidade é denominada decibel (dB). Geralmente a intensidade é erroneamente confundida com o conceito de altura. Por exemplo, quando alguém se refere a "aumentar o som", a intenção do autor é deixar um som com uma maior intensidade, mas em termos de propriedades de som, a frase significa alterar a altura relativa à frequência do som. A Figura \ref{fig:itensidade}  ilustra diferentes amplitudes de onda, sendo: "A" a onda mais fraca, "B" a onda de média intensidade e "C" a onda mais forte. 
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{amplitude.jpg}
+\caption[Intensidade do som]{Intensidade do som. Adaptada de \citeonline{oscrove}}
+\label{fig:itensidade}
+\end{figure}
+
+Define-se por altura a propriedade do som de ser mais grave ou mais agudo. Este conceito está diretamente relacionado com a frequência, que é o número de oscilações que ocorrem por unidade de tempo \cite{ferreira}. Na Figura \ref{fig:amplitude} pode ser visto o diferente número de oscilações entre as ondas "A", "B" e "C" para um mesmo período. 
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{frequencia.jpg}
+\caption[Frequência das ondas sonoras]{Frequência das ondas sonoras \cite{oscrove}}
+\label{fig:amplitude}
+\end{figure}
+
+Quando o período da onda é de um segundo, então cada ciclo possui um \textit{Hertz} (Hz). As frequências audíveis para o ouvido humano variam, aproximadamente, da faixa de 20Hz até 20kHz, ou, de 20 à 20.000 ciclos por segundo \cite{valle}. As frequências podem ser classificadas em três grupos:
+
+\begin{itemize}
+\item Graves --- entre 20Hz até 200Hz;
+\item Médios --- entre 200Hz até 6kHz;
+\item Agudos --- entre 6Khz até 20kHz;
+\end{itemize}
+
+O timbre é tido como a qualidade ou identidade do som. A partir dele é possível reconhecer o instrumento que deu origem ao som \cite{lacerda}. Por exemplo, um violão e um piano podem alcançar as mesmas frequências, porém o timbre será o que vai diferenciar um som característico de cada instrumento. Na Tabela \ref{tab:timbre} podem ser vistos os diferentes timbres dos instrumentos.
+
+\begin{table}[H]	
+	\center
+	\includegraphics[scale=0.9]{timbre.png}
+	\caption[Exemplo de formato de onda]{Exemplo de formato de onda \cite{krueger}}
+	\label{tab:timbre}
+\end{table}
+
+%----------------------------------- SEÇÃO PROCESSAMENTO DE SINAIS ----------------------------------------------
+
+\section{Processamento de Sinais}
+\label{sec:processamentosinais}
+Processamento Digital de Sinais (do inglês \textit{Digital Signal Processing} - DSP) é o conjunto de técnicas utilizadas para análise ou modificação de sinais. Em grande parte dos casos, esses sinais se originam de dados sensoriais do mundo real: vibrações sísmicas, imagens, ondas sonoras, etc. 
+
+DSP utiliza a matemática, algoritmos e técnicas para manipular os sinais após a conversão do sinal analógico para o formato digital. Alguns exemplos de manipulação de sinais: melhoria de imagens, reconhecimento e sintetização de voz, compressão de dados para o armazenamento ou transporte, etc. \cite{smith}. 
+
+Nesta seção é apresentado o processo de conversão de sinais e algumas das técnicas de DSP comumente utilizadas bem como: convolução, filtros digitais, modulação e a transformada rápida de Fourier (FFT).
+
+
+%----------------------------------- SUBSEÇÃO CONVERSÃO DIGITAL ----------------------------------------------
+
+\subsection{Conversão Digital de Sinal e Teorema de Nyquist}
+No processo de digitalização denominado amostragem de sinal, ou \textit{Analog to Digital Converter} (ADC), os dados analógicos de um sinal contínuo são codificados em um sinal discreto. Cada valor desse sinal discreto, ou digital, corresponde a uma amostra em função do tempo. Define-se como taxa de amostragem a quantidade de amostras por unidade de tempo, e, cada valor dessa amostra corresponde à amplitude do sinal \cite{park}. Dois exemplos de sinais podem ser observados na Figura \ref{fig:sinal}, onde, a figura da esquerda apresenta um sinal de onda contínuo e a da direita um sinal discreto. 
+
+\begin{figure}[H]
+\center
+\fbox{\includegraphics[scale=0.5]{ADC.png}}
+\caption[Sinais Contínuo e Discreto]{Sinais Contínuo e Discreto. Adaptada de \citeonline{lemos}}
+\label{fig:sinal}
+\end{figure}
+
+Nos CDs, as faixas de áudio possuem uma taxa de amostragem de 44.100Hz, ou seja, 44100 amostras de por segundo com a quantização de 16 bits cada uma. O valor da taxa de amostragem foi calculado com base no Teorema de Nyquist:
+\begin{equation}
+f_s=2*f_{max}
+\end{equation}
+Sendo, 
+\begin{equation}
+f_s = {taxa~de~amostragem}
+\end{equation}
+\begin{equation}
+f_{max} = {frequ\hat{e}ncia~m\acute{a}xima}
+\end{equation}
+
+De acordo com as equações anteriores e a frequências máxima audível para os seres humanos, aproximadamente 20kHz, a taxa de amostragem deveria ser de 40kHz, porém por convenção das gravadoras, estipulou-se o valor de 44.100Hz.
+
+%----------------------------------- SUBSEÇÃO CONVOLUÇÃO ----------------------------------------------
+
+\subsection{Convolução}
+
+Convolução pode ser definida como uma simples operação matemática de adição ou integração. Por exemplo, quando é feita uma operação de adição, dois números são somados produzindo como resultado um terceiro número. Já no processo de convolução, ao invés de dois números, dois sinais são somados produzindo um terceiro sinal. A operação de convolução, além de ser utilizada em DSP, é comum em áreas como probabilidade e estatística \cite{smith}. 	
+
+%----------------------------------- SUBSEÇÃO TRANSFORMADA RÁPIDA DE FOURIER ----------------------------------------------
+
+\subsection{Transformada Rápida de Fourier}
+A representação do sinal após o processo de conversão ADC normalmente é feita no domínio do tempo: os dados estão dispostos em função tempo x amplitude. Existe outra forma de representatividade do sinal chamada domínio da frequência, onde os dados estão dispostos nos valores frequência x amplitude. O domínio da frequência, como próprio nome sugere, permite que os dados sejam analisados sob o aspecto da frequência \cite{smith}.
+
+A Transformada Discreta de Fourier, do inglês \textit{Discrete Fourier Transform} (DFT), é uma técnica utilizada para a conversão do sinal discreto do domínio tempo para o domínio da frequência. Uma propriedade da DFT é poder fazer a conversão desse sinal no sentido inverso.
+
+Na computação um algoritmo utilizado para realizar a técnica matemática da DFT é a Transformada Rápida de Fourier (Fast Fourier Transformer - FFT). Através desse algoritmo é possível realizar a conversão entre domínios com um menor custo computacional \cite{park}. O processo de convolução também é aplicável em conjunto com a FFT, produzindo um algoritmo mais rápido denominado convolução de alta velocidade \cite{smith}.
+
+%----------------------------------- SUBSEÇÃO FILTROS DIGITAIS ----------------------------------------------
+
+\subsection{Filtros Digitais}
+Um sinal de áudio muitas vezes apresenta algum ruído indesejado, o som está grave, ou, o som está muito agudo. O processo de filtragem de sinais digitais surge com o intuito de eliminar as frequências indesejadas, chamado separação do sinal, e amplificar uma determinada frequência, denominado restauração do sinal \cite{smith}. Os filtros digitais podem ser classificados de acordo com os objetivos:
+
+\begin{itemize}
+\item Passa-baixas: filtro utilizado para eliminar as frequências que estão acima de uma frequência determinada permitindo apenas a passagem das frequências baixas. Este valor é denominado como frequência de corte;
+
+\item Passa-altas: o objetivo desse filtro é fazer o contrário do filtro de passa-baixa: atenuar as frequências que estão abaixo da frequência de corte;
+
+\item Passa-faixa: duas frequências de corte, uma alta e uma baixa, são definidas permitindo apenas a passagem das frequências que estão entre elas;
+
+\item Rejeita-faixa: é o oposto do filtro passa-faixa, duas frequências de corte são definidas e os valores que estão entre elas são atenuados.
+
+\end{itemize}
+
+Na Figura \ref{fig:filtros} é exibida graficamente a filtragem dos sinais no domínio da frequência, as faixas selecionadas representam as frequências que farão parte do sinal após o filtro e os que estão fora dela, as frequências que serão atenuadas.
+
+\begin{figure}[H]
+\center
+\fbox{\includegraphics[scale=0.5]{filtros.PNG}}
+\caption[Filtros digitais]{Filtros digitais: (1) Passa-baixa; (2) Passa-alta; (3) Passa-faixa; (4) Rejeita-faixa. Adaptado de \citeonline{park}}
+\label{fig:filtros}
+\end{figure}
+
+%----------------------------------- SUBSEÇÃO MODULAÇÃO ----------------------------------------------
+
+\subsection{Modulação}
+Uma técnica largamente utilizada no processamento digital de sinal é a modulação. Segundo \citeonline{park} modulação é definido como uma técnica de alteração da amplitude, frequência ou a fase de um sinal. 
+
+No processo de alteração de amplitude é aplicado um sinal de baixa frequência denominado oscilador de baixa frequência (\textit{Low Frequency Oscillator} - LFO) sobre outro sinal resultando um sinal com amplitude modificada. O LFO é importante para a obtenção de alguns efeitos sonoros. 
+
+%----------------------------------- SUBSEÇÃO EFEITOS SONOROS DIGITAIS ----------------------------------------------
+
+\section{Efeitos Sonoros Digitais}
+\label{sec:efeitos}
+Os efeitos digitais são assim denominados por serem criados a partir dos conceitos aplicados das técnicas de DSP. O sinal de áudio pode sofrer o processo de modificação da altura, do timbre, da intensidade ou até mesmo da duração, ou seja, os efeitos são responsáveis por alterar as propriedades do som, vistas na seção \ref{sec:propriedadesdosom}, trazendo como resultado um sinal de áudio diferente do original. 
+
+Estes efeitos são popularmente conhecidos através dos acessórios indispensáveis para guitarristas e baixistas profissionais: os pedais e as pedaleiras de efeitos. No caso das pedaleiras, há um conjunto de efeitos que podem ser utilizados individualmente ou simultaneamente, enquanto os pedais geralmente possuem apenas um único efeito. Mas assim como as pedaleiras é possível que os pedais funcionem conjunto, ligando os pedais em série, formando uma cadeia de efeitos. 
+
+A ordem em que estão dispostos os pedais de efeito nesta cadeia pode alterar a resultado final de áudio. Segundo \citeonline{boss} não há uma ordem correta ou errada da posição dos pedais, mas sugere que eles estejam dispostos de acordo com a Figura \ref{fig:cadeiaefeitos}. 
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.7]{conexaoPedais.jpg}
+\caption[A ordem dos pedais]{A ordem dos pedais \cite{boss}}
+\label{fig:cadeiaefeitos}
+\end{figure}
+
+Segundo \citeonline{reiman}, os efeitos podem ser categorizados em:
+\begin{itemize}
+\item Variação de Tempo --- \textit{Delay}, \textit{Reverb}, \textit{Flanger}, \textit{Phaser} e \textit{Chorus}; 
+\item Alteração do Formato de Onda --- Distorção;
+\item Modulação de Amplitude --- Trêmulo, Compressor e \textit{Noise Gate};
+\item Variação de Frequência --- \textit{Pitch}, \textit{Vibrato}, Equalizador;
+\end{itemize}
+
+Ainda nesta seção será apresentado o princípio de funcionamento de alguns dos efeitos encontrado nas categorias previamente listadas.
+
+O \textit{Delay}, também conhecido como \textit{Echo}, é um efeito de atraso do som original. É a simulação dos choques das ondas sonoras contra um corpo rígido, produzindo a repetição com atraso do som que o originou. A intensidade do som vai se perdendo a cada repetição. O efeito de \textit{Delay} é a base do funcionamento de outros efeitos como \textit{Flanger}, \textit{Phaser}, \textit{Chorus}, \textit{Reverb} conforme a Figura \ref{fig:temposdelay} \cite{mendesGoulart}. 
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{temposdelay.png}
+\caption[Tempos de \textit{Delay}]{Tempos de \textit{Delay} \cite{iazzetta}}
+\label{fig:temposdelay}
+\end{figure}
+
+Nos pedais as regulagens deste efeito são as de:
+\begin{itemize}
+\item \textit{Feedback} --- quantidade de repetições;
+\item Tempo --- tempo entre o som original e as repetições;
+\item \textit{Level} --- intensidade da repetição.
+\end{itemize}
+
+O efeito \textit{Reverb} é semelhante ao efeito \textit{Delay}, o som original reflete em vários corpos rígidos de tamanhos, formatos e densidades diferentes. Como pode ser visto na Figura \ref{fig:reverb}: uma fonte sonora, dentro de uma sala ampla, faz com que o áudio seja refletido pelas paredes até chegar ao ouvinte, fazendo com que este escute o som ressoar por mais tempo do quarto com dimensões menores \cite{anhaia}.
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{reverb.png}
+\caption[Reverberação em ambientes grandes]{Reverberação em ambientes grandes. Traduzido de \citeonline{mendesGoulart}}
+\label{fig:reverb}
+\end{figure}
+
+Este é um tipo de efeito que possui um grau de complexidade elevado e um custo alto de processamento, pois é necessária a simulação da reflexão das ondas sonoras em vários corpos e com tempos diferentes. Os parâmetros do \textit{Reverb} são:
+\begin{itemize}
+\item \textit{Size}(tamanho) --- controla o tamanho do ambiente;
+\item \textit{Predelay} --- regula tempo em que ocorrem as primeiras reflexões do som original;
+\item Densidade --- define a quantidade de superfícies refletoras no ambiente;
+\item Difusão --- controla o tempo de decaimento da intensidade do som.
+\end{itemize}
+
+\textit{Phaser} é um efeito causado pela soma do som original com o mesmo som de amplitude e freqüência idênticas, porém, com variação temporal de 1 a 10ms. O que resulta na interferência construtiva e destrutiva do sinal. As frequências que possuem o período diretamente relacionado ao tempo de atraso são atenuadas devido ao cancelamento de fase \cite{iazzetta}. Os controles do \textit{Phaser} são:
+\begin{itemize}
+\item \textit{Rate} --- regula a velocidade de varredura do modulador;
+\item \textit{Range} --- controla a faixa varrida pelo modulador.
+\end{itemize}
+
+\textit{Flanger} é um efeito produzido pela junção de dois sinais idênticos, porém um deles possui o atraso variável de 1 a 20ms. No efeito de \textit{Flanger} o sinal é realimentado provocando o cancelamento de algumas freqüências criando a sensação de decaimento e aumento em alguma delas. O \textit{Flanger} tem o mesmo princípio de funcionamento do efeito \textit{Phaser}, a diferença é que no segundo as atenuações e o reforço das freqüências ocorrem em intervalos regulares \cite{mendesGoulart}. 
+
+Os parâmetros do Flanger são:
+\begin{itemize}
+\item \textit{Delay} --- controla o tempo de atraso;
+\item \textit{Feedback} --- regula a quantidade do sinal processado que é realimentado no efeito;
+\item \textit{Rate} --- regula a velocidade de variação do modulador;
+\item \textit{Depth} --- define o \textit{delay} mínimo e máximo;
+\end{itemize}
+
+O efeito \textit{Chorus} é semelhante ao \textit{Flanger}, mas com a temporalidade de 20 a 30ms. O \textit{Chorus} dá a sensação de que o som original possui mais fontes sonoras do que o real, chamado de dobra \cite{reiman}. Os controles do \textit{Chorus} são de:
+\begin{itemize}
+\item \textit{Rate} --- controla a velocidade da modulação;
+\item \textit{Depth} (Profundidade) --- controla a intensidade da modulação.
+\end{itemize}
+
+O efeito de distorção pode ser definido como a amplificação do sinal até a sua saturação, dando a sensação de sujeira no som. O processo também é conhecido como clipping, onde parte do sinal original é perdido \cite{mendesGoulart}. Esse efeito pode ser divido em três subtipos: 
+\begin{itemize}
+\item \textit{Overdrive} --- possui um baixo nível de saturação, deixando que a sonoridade seja bem limpa em relação às outras distorções;
+\item Distorção --- ela possui um ganho maior que o \textit{Overdrive} e consequentemente um nível de saturação mais elevado;
+\item \textit{Fuzz} --- é o efeito de distorção com maior nível de saturação deixando o som mais "sujo" possível.
+\end{itemize}
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{distorcao.png}
+\caption[Comparativo entre espectros dos efeitos de \textit{Overdrive} e Distorção]{Comparativo entre espectros dos efeitos de \textit{Overdrive} e Distorção: (a) Onda sonora original (sup.) e com efeito de \textit{Overdrive} (inf.); (b) Onda sonora original (sup.) e com efeito de Distorção (inf.) \cite{krueger}}
+\label{fig:distorcao}
+\end{figure}
+
+Quanto aos parâmetros de controle, os efeitos de distorção são divididos em:
+\begin{itemize}
+\item \textit{Drive} ou \textit{Gain} --- controla a quantidade de saturação.
+\item Volume --- controla a intensidade do sinal;
+\item \textit{Tone}  --- regula o timbre do efeito, como o acréscimo de frequências altas. 
+\end{itemize}
+
+\textit{Pitch} é o efeito de alteração da tonalidade do som, ou seja, ele altera as freqüências de forma que o som fique mais agudo ou mais grave. Normalmente este processo é realizado mudando o tempo do áudio, por exemplo, ao diminuir-se a velocidade ele se torna mais grave, ao se aumentá-la o tom se torna mais agudo. O \textit{Pitch} possui como único parâmetro a transposição do tom \cite{iazzetta}.
+
+O efeito \textit{Tremolo} é obtido através da modulação da amplitude do sinal resultado na mudança periódica do volume. \cite{apple2012c}.
+
+Os parâmetros do efeito de \textit{Tremolo} geralmente são:
+\begin{itemize}
+\item \textit{Depth} --- controla a profundidade do modulador;
+\item \textit{Rate} --- regula a velocidade do modulador;
+\item \textit{Wave}  --- define o formato de onda do modulador. 
+\end{itemize}
+
+\section{Plataforma iOS}
+\label{sec:plataforma}
+
+Lançado em 2007, o iOS é um sistema operacional para dispositivos móveis da \textit{Apple} baseado em \textit{UNIX}. O seu uso é restrito aos produtos tais como: \textit{iPad}, \textit{iPhone} e \textit{iPod Touch}. Inicialmente não era permitido que aplicativos de terceiros fossem executados nos seus dispositivos, só sendo liberado em 2008 após o lançamento do iOS \textit{Software Development Kit} (SDK). Desde o seu lançamento, foram disponibilizadas diferentes versões do Sistema Operacional (SO). Até o presente momento, a versão atual é a 5.1. 
+
+As aplicações para o iOS são disponibilizadas na loja de aplicativos \textit{Apple} --- \textit{App Store}. Este serviço possui cerca de quinhentos mil programas e mais de vinte e cinco bilhões de \textit{downloads} no levantamento realizado pela \textit{Apple} no início de 2012. Neste mesmo período, a empresa fechou o ano fiscal com a receita de treze bilhões de dólares, superando os concorrentes e fazendo com que os desenvolvedores fossem atraídos pela visível rentabilidade \cite{ferreira}.
+	
+A \textit{Apple} disponibiliza um ambiente de desenvolvimento denominado \textit{Xcode}, onde os programadores podem baixá-lo e instalá-lo gratuitamente. Através desta ferramenta é possível desenvolver aplicações tanto para o SO \textit{Mac OS X}, quanto para o iOS, bem como a criação de telas, a simulação dos dispositivos iOS, a realização de testes e a integração com o iOS SDK. As aplicações desenvolvidas no \textit{Xcode} são escritas nas linguagens \textit{Objetive-C} e \textit{C++} \cite{pilone}.
+  
+Para a criação de \textit{softwares} no iOS é necessário entender o funcionamento da sua arquitetura que pode ser dividida em quatro camadas: \textit{Cocoa Touch}, \textit{Media}, \textit{Core Services} e \textit{Core OS}.  
+
+\subsection{Arquitetura}
+A arquitetura do iOS está organizada conforme a Figura \ref{fig:camadaios}. A última camada representada pelo \textit{Cocoa Touch} possui um nível de abstração mais alto, diferente do \textit{Core OS} que está na camada mais baixa. Entende-se esta abstração como o encapsulamento de trechos de códigos mais complexos, diminuindo assim o esforço do desenvolvedor por reduzir a quantidade de código produzido. O mesmo não acontece na camada mais baixa, onde é necessária uma compreensão maior do funcionamento do sistema \cite{apple2012b}. Cabe ao desenvolvedor optar pelo uso da camada que se enquadra com a necessidade da aplicação:
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{camadaios.png}
+\caption[Camadas do iOS]{Camadas do iOS \cite{apple2012b}}
+\label{fig:camadaios}
+\end{figure}
+
+\begin{itemize}
+\item \textit{Cocoa Touch} --- Provê acesso aos elementos de interface, eventos de toque, uso de recursos de acelerômetro, câmera e sistemas de localização e outros serviços de alto nível;
+\item \textit{Media} (Serviços de Mídia) --- Contém recursos de multimídia, bem como, gravação e mixagem de áudio, núcleo de animações e reprodução de vídeo e áudio;
+\item \textit{Core Services} (Serviços do sistema) --- Dá acesso a arquivos, banco de dados, preferências, livro de endereços entre outros serviços.
+\item \textit{Core OS} (Núcleo do SO) --- Possui recursos como segurança, gerenciamento de energia, entre outros.
+\end{itemize}
+
+\subsection{API de Áudio}
+\label{sec:apiaudio}
+Na camada \textit{Media} vista no modelo de arquitetura do iOS,  há um módulo de suporte a áudio nativo denominado \textit{Core Audio}. Este \textit{framework}, escrito na linguagem \textit{C}, permite a manipulação, gravação, mixagem e reprodução de áudio.  Dentre os benefícios providos pelo \textit{Core Audio} inclui-se o \textit{framework Audio Units}, responsável pelo o processamento digital de sinal de áudio. 
+
+O \textit{Audio Units} possui uma comunicação direta ao \textit{hardware} (Figura \ref{fig:camadaaudio}), provendo acesso simultâneo de E/S (entrada e saída)  e com prioridade em tempo real, tornando possível a execução deste trabalho. O sistema operacional para dispositivos móveis da \textit{Google} (\textit{Android}) difere-se do iOS neste ponto,  já que não possui suporte para aplicações sonoras de tempo real. Isso ocorre devido a limitações relacionadas à latência de áudio \cite{multimedia}.
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{camadaaudio.png}
+\caption[\textit{Frameworks} de áudio no iOS]{\textit{Frameworks} de áudio no iOS \cite{apple2012b}}
+\label{fig:camadaaudio}
+\end{figure}
+
+\subsection{Conectores para os dispositivos iOS}
+\label{sec:conectores}
+Existem conectores para os dispositivos móveis da \textit{Apple}, vendidos separadamente, que possibilitam a conexão deste com uma guitarra ou até mesmo um microfone. Dois principais produtos concorrentes deste mercado são o \textit{iRig}, fabricado pela \textit{IK Multimedia}, e o \textit{AmpKit LiNK}, produzido pelo fabricante \textit{Peavey}.
+
+O dispositivo \textit{iRig} possui apenas a função de adaptador, ou seja, apenas conecta o aparelho iOS através de um plugue \textit{P2} (3,5mm) com as entrada \textit{P10} (cabos de guitarra; 6,35mm) e \textit{P2} (para os fones de ouvido ou amplificador; 3,5mm). Já o dispositivo \textit{AmpKit LiNK}, além de ter a mesma função do \textit{iRig}, possui um \textit{hardware} compensador de sinal, o  que melhora sensivelmente a captura de áudio \cite{karasinski}. Na Figura \ref{fig:conector} pode ser observado o conector \textit{iRig} à esquerda e o conector \textit{AmpKit LiNK} à direita.
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=1.0]{conector.png}
+\caption[Conectores \textit{iRig} e \textit{AmpKit LiNK}]{Conectores \textit{iRig} e \textit{AmpKit LiNK}. Adaptado de \citeonline{karasinski}}
+\label{fig:conector}
+\end{figure}

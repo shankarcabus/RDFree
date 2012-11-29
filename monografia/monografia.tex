@@ -1,0 +1,215 @@
+\documentclass[12pt,a4paper]{abnt}
+
+\usepackage[brazil]{babel} % em portugues brasileiro
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{babel}
+\usepackage{glossaries}
+\usepackage{subfig}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{multirow} % A table with a row taking more than one physical space
+\usepackage{subfloat} % Using two tables with numbering X.a and X.b
+\usepackage{booktabs} % top-rule, mid-rule e bottom-rule
+\usepackage[alf, abnt-etal-list=5, abnt-etal-text=default]{abntcite} % For author-name citation
+\usepackage{ifxetex}
+\usepackage{chngpage}
+\usepackage{mathtools}
+\usepackage{chngcntr}
+
+% ? inicio codigo fonte
+\usepackage{listings}
+
+\lstset{numbers=left,
+stepnumber=1,
+firstnumber=1,
+numberstyle=\tiny,
+extendedchars=true,
+breaklines=true,
+frame=tb,
+basicstyle=\footnotesize,
+stringstyle=\ttfamily,
+showstringspaces=false
+}
+\renewcommand{\lstlistingname}{Code}
+\renewcommand{\lstlistlistingname}{Lista de Listagens}
+% ? fim codigo fonte
+
+%------------------Font specification-------------------%
+\usepackage{ifxetex}
+% If you want to use font other than the default one,
+% you MUST use XeLaTeX to compile.
+\ifxetex
+  \usepackage{fontspec}
+  \usepackage{xunicode}
+  % Use Monaco as default font, change down below (if you wish).
+  \newfontfamily{\monaco}{Monaco} % Replace "Monaco" with another font name.
+\else
+  \newcommand{\monaco}{\ }
+\fi
+\usepackage{color,xcolor}
+\usepackage{listings}
+
+\floatstyle{ruled}
+\newfloat{program}{thp}{lop}
+\floatname{program}{Program}
+
+%Legendas na posição superior esquerda
+\captionsetup[table]{singlelinecheck=off}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\counterwithout{footnote}{chapter}
+
+\renewcommand{\lstlistingname}{Algoritmo}
+%\renewcommand{\lstlistoflistings}{Lista de Algoritmos}
+\renewcommand{\lstlistlistingname}{Lista de Algoritmos}
+
+\instituicao{UNEB - Universidade do Estado da Bahia 
+             \par Departamento de Ciências Exatas e da Terra}
+\titulo{Uma solução computacional para integração entre Web Semântica e Redes Complexas}
+\autor{Shankar Cabus de Teive e Argollo}
+\orientador{Eduardo Manuel de Freitas Jorge}
+\local{Rua Silveira Martins, 2555, Cabula, Salvador-BA}
+\data{09 de maio de 2012}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \textbf{{\large\MakeUppercase{Universidade do Estado da Bahia}}} \\
+        \textbf{{\large\MakeUppercase{Departamento de Ciências Exatas e da Terra}}} \\
+	\textbf{{\large\MakeUppercase{Colegiado de Sistemas de Informação}}} \\[3.9cm]
+
+	\begin{espacoduplo}
+	  \textbf{{\Large\MakeUppercase{Uma solução computacional para integração entre Web Semântica e Redes Complexas}}} \\[4.5cm]
+	\end{espacoduplo}
+        {\Large Shankar Cabus de Teive e Argollo} \\[1.9cm]
+        \vfill        
+        {\large Salvador\\2012}
+    \end{center}
+\end{titlepage}
+
+% Folha de rosto sem o uso de \folhaderosto
+\begin{titlepage}
+    \begin{center}
+        \textbf{{\large\MakeUppercase{Universidade do Estado da Bahia}}} \\
+        \textbf{{\large\MakeUppercase{Departamento de Ciências Exatas e da Terra}}} \\
+	\textbf{{\large\MakeUppercase{Colegiado de Sistemas de Informação}}} \\[3.9cm]
+	
+	\begin{espacoduplo}
+	  \textbf{{\Large\MakeUppercase{Uma solução computacional para integração entre Web Semântica e Redes Complexas}}} \\[1.5cm]
+	\end{espacoduplo}
+	{\Large Shankar Cabus de Teive e Argollo} \\[1.5cm]
+        \hspace{.45\textwidth} % posicionando a minipage
+        \begin{minipage}{.5\textwidth}
+            \begin{espacosimples}
+                Monografia apresentada à Banca Examinadora como exigência parcial para obtenção do título de bacharel em Sistemas Informação pela Universidade do Estado da Bahia.
+            \end{espacosimples}
+        \end{minipage}
+        \vfill
+	{\large Orientador:\\ Eduardo Manuel de Freitas Jorge} \\[0.6cm]	
+        \vfill
+        {\large Salvador\\2012}
+    \end{center}
+\end{titlepage}
+
+%FOLHA  DE APROVAÇÃO
+
+ \begin{center}
+ \espaco{simples}
+ \textbf{SHANKAR CABUS DE TEIVE E ARGOLLO}\\
+ \vspace{3cm}
+ \textbf{Uma solução computacional para integração entre Web Semântica e Redes Complexas}\\
+
+ \vspace{1cm}
+ \hspace{15cm}
+ \end{center}
+
+ \begin{flushright}
+ \begin{minipage}[r][10mm][t]{7cm}
+ \footnotesize Monografia apresentada à Banca Examinadora como exigência parcial para obtenção do título de bacharel em Sistemas de Informação pela Universidade do Estado da Bahia. \\
+ \footnotesize Orientador. Eduardo Manuel de Freitas Jorge
+ \end{minipage}
+ \end{flushright}
+
+ \begin{flushleft}
+ \vspace{1cm}
+ %\footnotesize Aprovada em XX/XX/2012 \\
+ \end{flushleft}
+
+ \begin{center}
+ \vspace{1cm}
+ \footnotesize BANCA EXAMINADORA \\
+ \vspace{1cm}
+
+ \rule{10cm}{.1mm}\\
+ \textbf{Prof. Eduardo Manuel de Freitas Jorge}\\
+ Doutor em Difusão do Conhecimento\\
+ Universidade do Estado da Bahia\\
+ \vspace{2cm}
+
+ \rule{10cm}{.1mm}\\
+ \textbf{Prof. Alexandre Rafael Lenz}\\
+  Doutorando em Ciência da Computação \\
+  Universidade do Estado da Bahia\\
+ \vspace{2cm}
+
+ \rule{10cm}{.1mm}\\
+ \textbf{Prof. Uedson Santos Reis}\\
+ Mestre em Modelagem Computacional\\
+ Serviço Nacional de Aprendizagem Industrial\\
+ \end{center}
+
+ \chapter*{Agradecimentos}
+% Agradeço aos meus pais pela força e apoio ao longo da vida. Especialmente a minha mãe, por ter batalhado pelas minhas vitórias, e pelo exemplo de pessoa que ela foi e sempre será. 
+
+% Agradeço também a minha namorada Mariana, por ter me incentivado e me proporcionado muitos momentos de alegria.
+
+% Agradeço aos meus amigos que me ajudaram de alguma forma em minha formação:
+% Marcos, Felipe, Raul, Shankar, Leonardo, Osias, Nicole, Luciana, Matheus, Jussi, Fabíola, Weslley e Vitor.
+
+% Agradeço aos meus colegas do trabalho também: Ronaldo, por ter corrigido inúmeras vezes o meu trabalho, Vanessa, Flávio, Igor, Gustavo e Eduardo Jorge por ter sido chefe, professor e ter orientado o meu trabalho ao mesmo tempo.
+
+ %\begin{resumo}
+
+
+%\textbf{Palavras-chave}: 
+ %\end{resumo}
+
+%\begin{abstract}
+
+
+%\textbf{Keywords}: 
+ %\end{abstract}
+
+\listoffigures
+\lstlistoflistings
+\listoftables
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %\chapter*{Lista de Siglas}
+
+ %iOS - \textit{iPhone Operational System}
+ %DSP - \textit{Digital Signal Processing} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sumario
+
+\include{introducao}
+\include{projeto}
+
+
+\bibliography{bibliografia}
+
+%\include{apendice}
+
+\end{document}

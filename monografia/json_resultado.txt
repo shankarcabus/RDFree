@@ -1,0 +1,35 @@
+{
+  'head': {
+    'link': [],
+    'vars': [
+      'band',
+      'genre'
+    ]
+  },
+  'results': {
+    'distinct': False,
+    'bindings': [
+      {
+        'band': {
+          'type': 'uri',
+          'value': 'http://dbpedia.org/resource/Obrint_Pas'
+        },
+        'genre': {
+          'type': 'uri',
+          'value': 'http://dbpedia.org/resource/Rock_music'
+        }
+      },
+      {
+        'band': {
+          'type': 'uri',
+          'value': 'http://dbpedia.org/resource/Obrint_Pas'
+        },
+        'genre': {
+          'type': 'uri',
+          'value': 'http://dbpedia.org/resource/Ska'
+        }
+      },
+    ],
+    'ordered': True
+  }
+}

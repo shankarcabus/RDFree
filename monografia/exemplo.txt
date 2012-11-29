@@ -1,0 +1,16 @@
+# Vertices
+{
+  "pai" : {
+    "Francisco" : {"id" : 1}
+  },
+  "filho" : {
+    "Mirosmar" : {"id" : 2},
+    "Emival" : {"id" : 3},
+  }
+}
+
+# Arestas
+[
+  [1, 2],
+  [1, 3]
+]

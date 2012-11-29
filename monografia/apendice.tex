@@ -1,0 +1,217 @@
+\appendix
+\chapter{\textit{Método de captura de áudio}}
+
+\begin{lstlisting}
+OSStatus micLineInCallback (void					*inRefCon, 
+                            AudioUnitRenderActionFlags 	*ioActionFlags, 
+                            const AudioTimeStamp			*inTimeStamp, 
+                            UInt32 						inBusNumber, 
+                            UInt32 						inNumberFrames, 
+                            AudioBufferList				*ioData)
+{
+    OSStatus renderErr;   
+    NativeAudio *THIS = (NativeAudio*) inRefCon;    
+    renderErr = AudioUnitRender(THIS.ioUnit, ioActionFlags, 
+								inTimeStamp, 1, inNumberFrames, ioData);
+    
+    //Getting the samples
+    SInt32 *inSamplesLeft   = (SInt32 *) ioData->mBuffers[0].mData;
+    SInt32 *inSamplesRight  = (SInt32 *) ioData->mBuffers[1].mData;
+    
+    float *sampleBufferLeft = THIS.conversionBufferLeft;
+    float *sampleBufferRight = THIS.conversionBufferRight;
+    
+    //Convert SInt32 to float
+    for(int i = 0; i < inNumberFrames; i++){
+        sampleBufferLeft[i] = (inSamplesLeft[i]/(float)0x00FFFFFF);
+        sampleBufferRight[i] = inSamplesRight[i]/(float)0x00FFFFFF;
+    }       
+    
+    //Effects loop
+    for(id idEffect in THIS.effectsArray) {
+        Effect *effect = (Effect *)idEffect;
+        if(effect.isEnabled){
+            [effect onStream : inNumberFrames sampleBufferLeft:(float*)sampleBufferLeft sampleBufferRight :(float*)sampleBufferRight];
+        }
+    }
+    
+    //Convert float to SInt32
+    for(int i = 0; i < inNumberFrames; i++){        
+        inSamplesLeft[i] = sampleBufferLeft[i]*(0x00FFFFFF);
+        inSamplesRight[i] = sampleBufferRight[i]*(0x00FFFFFF);
+    }    
+    
+    return noErr;
+}
+\end{lstlisting}
+
+\chapter{\textit{Método de inicialização do módulo de captura de áudio}}
+
+\begin{lstlisting}
+- (void) setupAudioProcessingGraph
+{
+    OSStatus result = noErr;            
+    result = NewAUGraph (&processingGraph);    
+    if (noErr != result) {
+        NSLog(@"NewAUGraph failed: %ld", result); 
+        return;
+    }
+       
+    AudioComponentDescription iOUnitDescription;
+    iOUnitDescription.componentType          = kAudioUnitType_Output;
+    iOUnitDescription.componentSubType       = kAudioUnitSubType_RemoteIO;
+    iOUnitDescription.componentManufacturer  = kAudioUnitManufacturer_Apple;
+    iOUnitDescription.componentFlags         = 0;
+    iOUnitDescription.componentFlagsMask     = 0;
+    
+    result =    AUGraphAddNode (
+                                processingGraph,
+                                &iOUnitDescription,
+                                &ioNode);    
+    
+    if (noErr != result) {
+        NSLog(@"AUGraphAddNode failed for RemoteIO: %ld", result); 
+        return;
+    }
+    
+    AudioComponentDescription mixerUnitDescription;
+    mixerUnitDescription.componentType          = kAudioUnitType_Mixer;
+    mixerUnitDescription.componentSubType       = kAudioUnitSubType_MultiChannelMixer;
+    mixerUnitDescription.componentManufacturer  = kAudioUnitManufacturer_Apple;
+    mixerUnitDescription.componentFlags         = 0;
+    mixerUnitDescription.componentFlagsMask     = 0;
+    
+    result =    AUGraphAddNode (
+                                processingGraph,
+                                &mixerUnitDescription,
+                                &mixerNode
+                                );
+    
+    if (noErr != result) {
+        NSLog(@"AUGraphAddNode failed for Mixer: %ld", result); 
+        return;
+    }
+      
+    result = AUGraphOpen(processingGraph);
+    if (noErr != result) {
+        NSLog(@"AUGraphOpen failed: %ld", result); 
+        return;
+    }    
+    
+    result = AUGraphNodeInfo(processingGraph, ioNode, NULL, &ioUnit);
+    if (noErr != result) {
+        NSLog(@"AUGraphNodeInfo failed: %ld", result); 
+        return;
+    }
+       
+    if([session inputIsAvailable]){        
+        UInt32 enableInput = 1;    //Use 0 to disable
+        AudioUnitElement inputBus = 1;   //Use 0 to output bus
+        
+        result = AudioUnitSetProperty(ioUnit, 
+                             kAudioOutputUnitProperty_EnableIO, 
+                             kAudioUnitScope_Input, 
+                             inputBus, 
+                             &enableInput, 
+                             sizeof(enableInput));
+        
+        if (noErr != result) {
+            NSLog(@"AudioUnitSetProperty for EnableIO failed: %ld", result); 
+            return;
+        }
+    }
+    
+    result =    AUGraphNodeInfo (
+                                 processingGraph,
+                                 mixerNode,
+                                 NULL,
+                                 &mixerUnit
+                                 );
+    if (noErr != result) {
+        NSLog(@"AUGraphNodeInfo for mixerNode failed: %ld", result); 
+        return;
+    }
+    
+	if([session inputIsAvailable]) {        
+        UInt16 busNumber = 0;		// mic channel on mixer               
+        AURenderCallbackStruct inputCallbackStruct;
+        
+        inputCallbackStruct.inputProc        = micLineInCallback;	// 8.24 version
+        inputCallbackStruct.inputProcRefCon  = self;               
+        result = AUGraphSetNodeInputCallback (
+                                              processingGraph,
+                                              mixerNode,
+                                              busNumber,
+                                              &inputCallbackStruct
+                                              );
+        
+        if (noErr != result) {
+            NSLog(@"AUGraphSetNodeInputCallback mic/lineIn: %ld", result); 
+            return;
+        }
+        
+        memset(&streamDesc, 0, sizeof(streamDesc));
+        int bytesPerSample           = sizeof(AudioUnitSampleType);        
+        streamDesc.mFormatID         = kAudioFormatLinearPCM;
+        streamDesc.mFormatFlags      = kAudioFormatFlagsAudioUnitCanonical;
+        streamDesc.mBytesPerPacket   = bytesPerSample;
+        streamDesc.mBytesPerFrame    = bytesPerSample;
+        streamDesc.mFramesPerPacket  = 1;
+        streamDesc.mBitsPerChannel   = 8 * (bytesPerSample);
+        streamDesc.mChannelsPerFrame = 2;
+        streamDesc.mSampleRate       = sampleRate;               
+        result =	AudioUnitSetProperty (
+                                          ioUnit,
+                                          kAudioUnitProperty_StreamFormat,
+                                          kAudioUnitScope_Output,
+                                          1,
+                                          &streamDesc,
+                                          sizeof (streamDesc)
+                                          );          
+        if (noErr != result) {
+            NSLog(@"AudioUnitSetProperty mic/lineIn: %ld", result); 
+            return;
+        }        
+    }
+    
+    result = AUGraphConnectNodeInput(processingGraph, mixerNode, 0, ioNode, 0);
+    if (noErr != result) {
+        NSLog(@"AUGraphConnectNodeInput for IoNode failed: %ld", result); 
+        return;
+    }
+}
+\end{lstlisting}
+
+\chapter{\textit{Classe do efeito de \textit{Overdrive}}}
+
+\begin{lstlisting}
+#import "Overdrive.h"
+
+@implementation Overdrive
+
+-(void)onInit{
+    Slider *gainSlider = [[Slider alloc] initWithConfiguration:0 min:-1 max:1];
+    Slider *levelSlider = [[Slider alloc] initWithConfiguration:1 min: 0 max: 1];    
+    [self insertSlider:gainSlider sliderIndex:OVERDRIVE_GAIN];
+    [self insertSlider:levelSlider sliderIndex:OVERDRIVE_LEVEL];
+}
+
+-(void)onConfigurationChanged{
+    float gain = [self getCurrentValue:OVERDRIVE_GAIN];
+    level = [self getCurrentValue:OVERDRIVE_LEVEL];    
+    k = 2 * gain / (1 - gain);
+}
+
+-(void)onStream : (UInt32) inNumberFrames sampleBufferLeft: (float*) sampleBufferLeft sampleBufferRight: (float*) sampleBufferRight{
+    float *x1;
+    x1 = sampleBufferLeft;
+    
+    for(int i = 0; i < inNumberFrames; i++){        
+        x1[i] = ((1 + k) * x1[i]) / ( 1 + k * abs(x1[i]) );
+        x1[i] *= level;           
+        sampleBufferRight[i] = x1[i];    
+    }    
+}
+
+@end
+\end{lstlisting}

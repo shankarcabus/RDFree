@@ -1,0 +1,194 @@
+\chapter{?}
+
+\chapter{Análise e Projeto RDFree}
+
+\label{cap:projeto}
+
+Com novas soluções tecnológicas para facilitar a geração de conteúdo na internet e torná-la mais rápida e dinâmica, surgiram também novos problemas. Um deles é o problema da organização e recuperação das informações, que estão espalhadas pela internet e à mercê de motores de buscadores para serem recuperadas. Mas a depender da complexidade da condição de recuperação, esses buscadores convencionais têm sua eficácia reduzida, pois seu funcionamento se baseia pela frequência e densidade que os termos buscados aparecem numa determinada página da internet. 
+
+Focado no problema da organização e recuperação dos dados, a Web Semântica se propõe a organizar e facilitar a recuperação das informações, adicionando uma nova camada de dados sobre os dados, os metadados. Estes metadados criam uma rede de informação, ligando sujeitos a objetos por meio de predicados, tal como a oração "Metallica é uma banda de Rock", onde "Metallica" é o sujeito, "é uma banda de" é o predicado, e "Rock" é o objeto.
+
+Na Web Semântica, os informações estão interligadas e podem ser representada graficamente como uma rede semântica, onde o sujeito e o objeto são os vértices e o predicado a aresta. Existem no mercado softwares de análise de redes que se propõe a gerar o gráfico de forma personalizada, bem como calcular métricas que caracterizam a rede, como grau de complexidade, clusterização, densidade, e outras. Esses \textit{softwares} funcionam a partir de uma entrada de dados num formato conhecido, que varia de acordo com o \textit{software}.
+
+Apesar de existirem muitas ferramentas de análises de rede, este campo de estudo ainda carece de um modelo computacional que faça algumas etapas preliminares: a de consultar e extrair os dados a partir de uma base de dados e depois torná-los legíveis para estas ferramentas.
+
+Portanto, este trabalho tem como objetivo desenvolver uma ferramenta de extração e conversão de dados RDF para um formato interpretável por \textit{softwares} de análise de redes. Esta ferramenta foi denominada RDFree, nome proveniente da junção entre o acrônimo RDF e a palavra em inglês \textit{free} (livre).  
+
+Com a utilização do RDFree, pesquisadores da área de redes semânticas podem gerar facilmente o gráfico e as métricas da rede, a partir dos dados presentes na \textit{Linked Data}, e utilizar esses dados como subsídio para suas pesquisas.
+
+Nas próximas seções será apresentada a ferramenta de conversão desenvolvida, dando uma visão mais aprofundada sobre o seu funcionamento e as etapas que foram necessárias para o alcance do objetivo fulcral desde trabalho. [ sumarizar os itens das próximas seções ]
+
+Na próxima seção, é apresentado alguns trabalhos relacionados na área
+
+\section{Trabalhos Relacionados}
+
+Na busca por soluções semelhantes ao objetivo deste trabalho que pudessem contribuir na especificação do RDFree, foram encontrados alguns projetos no domínio da web semântica e redes que contribuíram para concepção do RDFree e confirmaram a deficiência por ferramentas de extração de conversão de dados para um formato reconhecível por softwares de análise de redes.
+
+Uma das mais utilizadas ferramentas de análise de redes é o \textit{software} \textit{open-source} Gephi, que foi apelidado pela comunidade como o \textit{Photoshop\footnote{Software líder do mercado dos editores de imagem} } para gráficos. Segundo a descrição feita pelo site oficial\footnote{https://gephi.org}, o Gephi é uma ferramenta de visualização interativa e uma plataforma de exploração de todos os tipos de redes e sistemas complexos, dinâmicos e gráficos hierárquicos, capaz de ser executado nos sistemas operacionais Windows, Linux e Mac OS X.
+
+O Gephi, além de suas ferramentas nativas, possui ainda alguns \textit{plugin}\footnote{ Complementos que podem ser incorporados à ferramenta}, como é o caso do SemanticWebImport, um plugin desenvolvido pela Wimmics\footnote{http://wimmics.inria.fr/}, que permite a importação de dados semânticos para o Gephi. Os dados importados são obtidos a partir de uma consulta SPARQL em uma base dados semântica (RDF).
+
+Diferente do RDFree, que tem o propósito de ser uma ferramenta genérica e modularizada, o SemanticWebImport é limitado ao Gephi, sendo incapaz de funcionar de forma independente ou com outras ferramentas. Outro ponto a ser observado na pesquisa é que o resultado obtido com este plugin não foi o esperado. A partir de uma mesma consulta SPARQL a base de dados da DBpedia, os resultados obtidos com o SemanticWebImport não foram compatíveis com os resultados obtidos a partir de uma consulta direta à base de dados por meio do Virtuoso SPARQL\footnote{Interface utilizada pela DBpedia para fazer consultas SPARQL}. Essa inconsistência dos dados não é encontrada no RDFree, que obteve resultados idênticos ao esperado.
+
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.7]{images/SemanticWebImport1.png}
+\caption{Janela do SemanticWebImport com consulta SPARQL}
+\label{fig:semanticwebimport1}
+\end{figure}
+
+Uma ferramenta muito completa encontrada neste estudo foi a \textit{TopBraid Composer}. Implementada como um plugin do Eclipse, ela serve como um ambiente de modelagem e edição de ontologias, construção de aplicações semântica, criação de gráficos e ainda, como o site oficial o descreve, "a melhor ferramenta SPARQL no mercado". O \textit{TopBraid Composer} é distribuído em três versões: Free, Standard e Maestro, sendo esta última a mais completa e licenciada por U\$3.450,00. Contudo, este software está mais voltado para criação e modelagem de ontologias, sendo incapaz de fazer uma consulta remota e converter os dados para um formato desejado.
+
+Mais simples que a \textit{TopBraid Composer}, o software Welkin, open-source desenvolvido em 2006 no MIT (\textit{Massachusetts Institute of Technology}), tem o objetivo de ser um visualizador de modelos RDF. Seu \textit{input} está limitado a arquivos do tipo RDF, RDFS, OWL, n3 ou turtle, não sendo capaz de realizar consultas SPARQL em base de dados remotas ou locais. Suas funcionalidades também são reduzidas, limitando-se à criação do gráfico da rede e dos gráficos de grau de entrada, grau de saída e coeficiente de clusterização, como é possível ver na figura \ref{fig:welkin}.
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.55]{images/welkin.png}
+\caption{Gráfico gerado pelo Welkin}
+\label{fig:welkin}
+\end{figure}
+
+Assim como o \textit{Welkin}, outra ferramentas se propõe a ser um visualizador de modelo RDF, tais como \textit{visualRDF}, \textit{Visual Browser}, \textit{RDF Gravity} e \textit{IsaViz}. Todas estas encontram-se desatualizadas e com última versão datada de 2004 à 2007.
+
+Vale citar ainda a \textit{Force-Directed Graph}, uma ferramenta online escrita em \textit{JavaScript} e que, entre todas as ferramentas estudadas, é a que se encontra mais atualizada (11/2012). Seu objetivo limita-se à representação gráfica da rede a partir de uma entrada de dados padrão no formato JSON. Apesar do seu propósito estar mais próximo do \textit{Gephi} e mais distante do objetivo deste trabalho, o \textit{Force-Directed Graph} serviu como inspiração para modelagem do RDFree, que também utiliza um arquivo JSON como normalizador dos dados.
+
+%Concluída a pesquisa por trabalhos correlatos, foi feita uma comparação entre os projetos estudados e o RDFree, como observado na tabela 3.1. Em seguida, utilizando
+
+\section{Requisitos e Projeto Arquitetural}
+
+
+A análise de trabalhos correlatos foi importante no processo de levantamento de requisitos funcionais (RF) e não funcionais (RNF) do RDFree, como pode ser visto na tabela \ref{tab:requisitos}.
+
+\begin{table}[H] % [htb]-> here, top, bottom
+   \centering   % tabela centralizada
+   \setlength{\arrayrulewidth}{2\arrayrulewidth}  % espessura da  linha
+   \setlength{\belowcaptionskip}{10pt}  % espaço entre caption e tabela
+   \caption[Requisitos funcionais e não funcionais]{Requisitos funcionais e não funcionais}
+   \label{tab:requisitos}
+   \begin{adjustwidth}{-1cm}{-1cm}  
+   \begin{center}
+	\begin{tabular}[H]{|l|l|}
+	\hline 
+	Requisito & Descrição \\ 
+	\hline 
+	RF1 & A aplicação deve conseguir importar dados a partir de uma consulta SPARQL a uma base de dados remota ou local. \\ 
+	\hline 
+	RF2 & Os dados devem ser normalizados para um formato padrão. \\ 
+	\hline 
+	RF3 & A conversão dos dados normalizados para um saída legível por um determinado software de análise de redes deve ser salva em um arquivo \\ 
+	\hline 
+	RF4 & As definições de configuração do conversor devem estar em um arquivo separado do código. \\ 
+	\hline 
+	RNF1 & A aplicação deve dar suporte a inclusão de novos módulos de tradução. \\ 
+	\hline 
+	\end{tabular} 
+    \end{center}
+    \end{adjustwidth}
+\end{table}
+
+
+O projeto arquitetural deste trabalho é ilustrado pela figura \ref{fig:arquitetura} em forma de fluxograma, mostrando as etapas realizadas pela aplicação desde a sua inicialização, até a criação do arquivo de saída.
+
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.7]{images/arquitetura.png}
+\caption{Arquitetura do RDFree}
+\label{fig:arquitetura}
+\end{figure}
+
+
+Na camada (A) está a base de dados RDF, que pode ser remota ou local e que tem a função de retornar o resultado de uma consulta para a camada (B), onde estão os três módulos que compõe a ferramenta RDFree:
+
+\begin{itemize}
+\item \textbf{Extrator} - é o módulo responsável por se comunicar com a base de dados, executar a consulta e importar os resultados para a aplicação, contemplando o requisito RF1.
+
+\item \textbf{Normalizador} - visa facilitar o tarefa de conversão, criando uma estrutura de dados já com os nós e arestas da rede, satisfazendo o requisito RF2.
+
+\item \textbf{Conversor} - este módulo funciona como um tradutor, que recebe como entrada os dados padronizados, gerados pelo normalizador, e retorna um formato de acordo com sua espeficicação. Atende aos requisitos RF3 e RNF1.
+\end{itemize}
+
+
+
+\section{Projeto de Baixo Nível}
+
+Nesta seção será aprofundada a explicação de cada módulo, mostrando seu funcionamento de forma mais detalhada, bem como as tecnologias empregadas no projeto.
+
+O RDFree foi feito utilizando a linguagem de programação Python, portanto, os códigos encontrados nesta seção, bem como as bibliotecas utilizadas, estão escritos em Python.
+
+\subsection{Módulo de Extração}
+
+O módulo de extração inicia a execução do RDFree e é responsável por importar os dados que serão convertidos. A conexão com o endpoint e execução da consulta SPARQL são feitas com o auxílio do framework SPARQLWrapper, que provê uma interface amigável e simples para o programador, como pode ser visto no código \ref{sparqlwrapper}.
+
+\lstinputlisting[language=Python, label=sparqlwrapper, caption={Exemplo de SPARQLWrapper}]{sparqlwrapper.txt}
+
+Ao receber os resultados da consulta, o módulo de extração converte os resultados para o formato JSON, que é um formato de fácil manipulação no Python. %A estrutura padrão do JSON dos resultados pode ser vista no codigo \ref{jsonresultado}.
+
+%\lstinputlisting[language=Python, label=jsonresultado, caption={Exemplo de JSON com o resultado de uma consulta SPARQL}]{json_resultado.txt}
+
+\subsection{Módulo de Normalização}
+
+Após a extração, o resultado é normalizado para um formato genérico, que auxiliará na próxima etapa de conversão. Este novo formato, também em JSON, é composto por duas listas: uma de vértices ou nós e outra de arestas. A lista dos vértices é formada por todos os recursos (sujeitos e objetos) únicos presentes na consulta e seguidos de um identificador numérico, que será usado na lista de arestas, formada por pares de relacionamento entre os vértices.
+
+No exemplo de uma consulta pelos filhos de Francisco, o resultado pode ser o mostrado na tabela \ref{tab:exemplo} e o JSON desse resultado representado no código \ref{exemplo}. 
+
+\begin{table}[H] % [htb]-> here, top, bottom
+   \centering   % tabela centralizada
+   \setlength{\arrayrulewidth}{2\arrayrulewidth}  % espessura da  linha
+   \setlength{\belowcaptionskip}{10pt}  % espaço entre caption e tabela
+   \caption[Exemplo de resultado de uma consulta]{Exemplo de resultado de uma consulta}
+   \label{tab:exemplo}
+   \begin{adjustwidth}{-1cm}{-1cm}  
+   \begin{center}
+	\begin{tabular}{|c|c|}
+	\hline 
+	\textbf{Pai} & \textbf{Filho} \\ 
+	\hline 
+	Francisco & Mirosmar \\ 
+	\hline 
+	Francisco & Emival \\ 
+	\hline 
+	\end{tabular}
+	\end{center}
+    \end{adjustwidth}
+\end{table}
+
+\lstinputlisting[language=Python, label=exemplo, caption={Estrutura normalizada}]{exemplo.txt}
+
+%Este módulo tem como retorno as duas listas supracitadas, de arestas e vértices. O trecho de código responsável por fazer a normalização é mostrado no código ZZZ.
+
+
+\subsection{Módulo de Conversão}
+
+O módulo de conversão é responsável por transformar os dados normalizados para um padrão interpretável por ferramentas de análise de rede. Até a conclusão deste trabalho, foi criado apenas o módulo de conversão para o formato GEXF (Graph Exchange XML Format), uma linguagem criada em 2007 juntamente com o Gephi, com o objetivo de padronizar a descrição de estruturas complexas de redes, e portanto, o formato de entrada utilizado pelo Gephi. O projeto GEXF possui ainda bibliotecas para Python, Java, C++, JavaScript e Perl que facilitam na criação do arquivo. %O código do módulo de conversão para GEXF pode ser visto no código XXX.
+
+
+\section{Aplicando a solução em um domínio}
+
+\label{sec:solucao}
+
+Para mostrar o funcionamento da ferramenta desenvolvida neste trabalho, será utilizada a base de dados da DBpedia em Português, para buscar por bandas de música e seu respectivo gênero musical. Para fins didáticos, a consulta será limitada a mil resultados, que é equivalente a mil relacionamentos. A consulta SPARQL utilizada para definir o domínio estudado pode ser visto no código \ref{sparql}.
+
+\lstinputlisting[language=SPARQL, label=sparql, caption={SPARQL utilizado para consultar bandas e seus gêneros}]{sparql.txt}
+
+Neste exemplo, será utilizado o Gephi para gerar a representação gráfica dos dados, por isso o arquivo gerado será no formato GEXF.
+
+A consulta SPARQL mostrada no codigo \ref{sparql}, bem como a URI da DBpedia devem estar no arquivo de configuração, como o mostrado no codigo \ref{config}. Feito isso, a aplicação já pode ser iniciada executando o arquivo main.py, que salvará o resultado no arquivo output.gexf.
+
+\lstinputlisting[language=Python, label=config, caption={Arquivo de configuração}]{config.txt}
+
+Abrindo o arquivo output.gexf no Gephi é possível encontrar o grau médio da rede (1,727), densidade do grafo (0.003), modularidade (0,667), entre outras métricas. Ao abrir o Gephi, já é exibido um gráfico gerado de forma aleatória, mas para efeito didático, na figura \ref{fig:redesemantica} é mostrado o gráfico da rede distribuído utilizando o algoritmo de Fruchterman Reingold e classificado por excentricidade, onde os pontos vermelhos são os gêneros musicais e os azuis são as bandas.
+
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.4]{images/rede_semantica.png}
+\caption{Representação gráfica da rede semântica gerada pelo Gephi}
+\label{fig:redesemantica}
+\end{figure}
+
+
+\section{Análise da solução}
+
+Conforme foi mostrado na seção \ref{sec:solucao}, o RDFree se mostrou 

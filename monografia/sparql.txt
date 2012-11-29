@@ -1,0 +1,6 @@
+SELECT ?band_uri, ?genre_uri
+WHERE {
+    ?band_uri a <http://dbpedia.org/ontology/Band> ;
+    dbpedia-owl:genre ?genre_uri .
+}
+LIMIT 1000
