@@ -15,10 +15,10 @@
 \usepackage{url}
 \usepackage{enumerate}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{multirow} % A table with a row taking more than one physical space
-\usepackage{subfloat} % Using two tables with numbering X.a and X.b
-\usepackage{booktabs} % top-rule, mid-rule e bottom-rule
-\usepackage[alf, abnt-etal-list=5, abnt-etal-text=default]{abntcite} % For author-name citation
+\usepackage{multirow}
+\usepackage{subfloat}
+\usepackage{booktabs}
+\usepackage[alf, abnt-etal-list=5, abnt-etal-text=default]{abntcite}
 \usepackage{ifxetex}
 \usepackage{chngpage}
 \usepackage{mathtools}
@@ -205,10 +205,12 @@ showstringspaces=false
 \sumario
 
 \include{introducao}
+\include{teorico}
 \include{projeto}
 
-
+\nocite{*}
 \bibliography{bibliografia}
+
 
 %\include{apendice}
 

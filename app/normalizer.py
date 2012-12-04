@@ -32,4 +32,8 @@ def normalizer(results):
 
     ties.append(tie)
 
+  print nodes
+  print '*'*50
+  print ties
+
   return nodes, ties

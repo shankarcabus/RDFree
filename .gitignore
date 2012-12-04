@@ -23,3 +23,5 @@ etc/*.pid
 *.tmp
 *.aux
 *.bat
+*.gz
+*.log

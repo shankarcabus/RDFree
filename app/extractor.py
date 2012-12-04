@@ -22,5 +22,5 @@ def extractor():
     return False
 
     print u'Foram carregados %s resultados'%len(results['results']['bindings'])
-  print results
+  #print results
   return results

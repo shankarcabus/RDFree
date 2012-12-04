@@ -1,0 +1,170 @@
+\chapter{Fundamentação Teórica}
+
+Este capítulo tem por objetivo apresentar os principais temas deste trabalho. Mas para um melhor entendimento, inicialmente é feita uma contextualização história desde o surgimento da Web até o presente momento em que este trabalho foi escrito. Em seguida, é abordada a Web Semântica e as tecnologias que a rege: RDF e SPARQL. Por fim, apresenta-se os conceitos de Linked Data e redes complexas.
+
+\section{A História da Web}
+
+Segundo \cite{w3chistory2000}, em 1989, Tim Berners-Lee, funcionário do CERN\footnote{Conseil Européen pour la Recherche Nucléaire (Organização Europeia para a Pesquisa Nuclear)} escreveu uma proposta\footnote{http://www.w3.org/History/1989/proposal.html} de gerenciamento de informação. Esta proposta se tratava de um grande banco de dados com hiperligações, que mais tarde recebera o nome de World Wide Web (grande teia mundial), também conhecida como WWW ou simplesmente Web.
+
+No final de 1990, Berners-Lee havia colocado o projeto em prática e construído as ferramentas necessárias para o funcionamento da Web: Protocolo de Transferência de Hipertexto (HTTP), responsável pela transferência de dados pela Web; a Linguagem de Marcação de Hipertextos (HTML), utilizada para representar os textos e os hiperlinks das páginas da Web; e ainda o primeiro navegador, servidor HTTP e servidor Web. No ano seguinte, Berners-Lee publicou um resumo do projeto WWW, marcando este ano como o nascimento da Web como um serviço público da Internet.
+
+\begin{quote}
+O projeto World Wide Web (WWW) tem por objetivo permitir que todas as ligações possam ser feitas com qualquer informação, não importando onde elas se encontrem. [...] O projecto WWW foi lançado para permitir que os físicos de altas energias possam trocar informações, notícias e documentos. Estamos muito interessados em alargar a web a outras áreas e ter servidores de portas de ligação (Gateway) para outros dados. \cite{bernerslee1991}
+\end{quote}
+
+Na Web, os recursos, como páginas, documentos e imagens, são identificados por meio de URIs, acrônimo em inglês para \textit{Uniform Resource Identifier} (Identificador Uniforme de Recursos). Sendo que o grande diferencial do projeto de Berners-Lee foi a forma como as páginas eram relacionadas, utilizando um tipo específico de URI para se relacionar com outros recursos, o Uniform Resource Locator (URL). O URL é o endereço de um recurso disponível numa rede, podendo ser a Internet ou até uma rede interna (intranet), e que possui a seguinte estrutura:\linebreak\texttt{protocolo://maquina/caminho/recurso}.
+
+A adoção da World Wide Web por universidades e laboratórios de física, fez com que a Web ganhasse popularidade, como pode ser visto na figura \ref{fig:web}, que mostra a quantidade de clientes da Web de julho de 1991 à julho de 1994.
+
+\begin{figure}[H]
+\center
+\fbox{\includegraphics[scale=0.7]{images/web.png}}
+\caption{Gráfico de crescimento da quantidade de clientes da Web entre 1991 e 1994. Fonte: \ref{w3chistory2000}}
+\label{fig:web}  
+\end{figure}
+
+Entre 1999 e 2001, a utilização da Web continuou crescendo, mas agora com uma motivação ainda maior, a Web começou a ser explorada de forma comercial e marcada por grandes portais geradores de conteúdo. Nesta fase, também conhecida como Web 1.0, os usuários tinham características \textit{read-only} (somente leitura), ou seja, eles utilizavam a Web de forma passiva, consumindo informações geradas e disponibilizadas por grandes sítios que dominavam o mercado Web \cite{blattmannsilva2007}, tais como Altavista, Geocities, Yahoo, UOL, entre outros. Mais tarde, \cite{breitman2005} caracterizou esse período como Web Sintática, por não haver qualquer tipo de interpretação da informação presente na Web, pois o objetivo era somente o de apresentar o conteúdo para o usuário.
+
+Além de informações como notícias, artigos e imagens, outras mídias começaram a surgir e a Web tornou-se também um meio de entretenimento, cercado de jogos, bate-papo, vídeos, entre outros. Dá-se inicio à popularização da Web, que traz consigo uma nova preocupação: dar ao usuário a melhor experiência possível na frente do computador. Então as tecnologias avançaram e surgiram ainda novas linguagens, navegadores, protocolos e tecnologias, como AJAX\footnote{Acrônimo em língua inglesa de \textit{Asynchronous Javascript and XML}, trata-se do uso metodológico de tecnologias como Javascript e XML, providas por navegadores, para tornar páginas Web mais interativas com o usuário, utilizando-se de solicitações assíncronas de dados.}, técnicas de usabilidade foram estudadas e aplicadas, as conexões de internet ficaram cada vez mais rápidas, os sítios cada vez mais atrativos e o usuário participativo. Começa a segunda grande mudança de paradigma da Web, denominada por \cite{oreilly2004} como Web 2.0 e também conhecida como Web colaborativa, pois o usuário deixa de ser apenas consumidor de informação, para se tornar um produtor de conteúdo. A interação agora faz parte da Web. É neste período que surgem os blogs (sítios cuja estrutura permite atualização rápida pelo usuário a partir de artigos), e sítios como Youtube, Facebook, Wikipedia, entre outros. 
+
+\begin{quote}
+É a passagem de uma rede estática para uma dinâmica e de colaboraçãp, onde administram grupos de trabalhos colaborativos e interdisciplinares. E? constituída de um conjunto de novos serviços e ferramentas baseadas em um enfoque de colaboração, de dinamismo, e de facilidade de transferência de informação em todos os suportes (texto, imagem, áudio e vídeo). Web 2.0 descreve os sites de serviços ou tecnologias que promovem a capacidade de compartilhar e colaborar na rede. \cite{borchani2007}(BORCHANI, 2007 apud SANTOS e ALVES, 2009, p.2).
+\end{quote}
+
+Apesar do crescimento da Web e mudança de paradigma no que diz respeito à participação do usuário, uma coisa não mudou, a Web continua feita para ser entendida apenas pelo usuário. O que antes não parecia ser problema, agora começa a ficar preocupante, pois, com a facilidade para produzir conteúdo, o volume de informação cresce num ritmo ainda mais acelerado e desorganizado, dificultando a recuperação dessas informações espalhadas entre milhões de sítios. A figura \ref{fig:webusers} mostra a quantidade de usuários da Internet em milhões no período de 1995 à 2012.
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.55]{images/webusers.png}
+\caption{Gráfico de crescimento de usuários da Web entre janeiro de 1995 e janeiro de 2012. Fonte: Internet World Stats}
+\label{fig:webusers}
+\end{figure}
+
+Como as informações estavam espalhadas entre milhões de sites pela Web, era necessário uma forma de encontrar informações específicas. A primeira alternativa foi a criação de portais que agrupassem outros sites e os organizassem por temas, como era o caso do GeoCities, muito popular na década de 1990, porém extinto em 2009, pois já existia um método mais eficaz para recuperar as informações: as ferramentas de busca, também conhecidas como motores de busca. Estas ferramentas, a exemplo do Google, Bing e Yahoo!, percorrem as hiperligações da Web criando um índice dos documentos, que contém, entre outras informações, a quantidade de vezes que cada palavra aparece naquele documento. Dado uma palavra-chave buscada por um usuário, a ferramenta retorna resultados baseados, principalmente, em métricas como densidade e quantidade de vezes que a palavra-chave aparece nos documentos. Contudo, em buscas mais complexas, que envolvem muitos termos ou muitos cruzamentos de dados, esses buscadores convencionais tem sua eficácia reduzida, pois eles não conseguem interpretar o sentido de uma frase ou significado de cada palavra dentro de um contexto.
+
+É pensando no problema da organização e recuperação da informação que em 2001 Berners-Lee, juntamente com James Hendler e Ora Lassila, publica um artigo na revista \textit{Scientific American}, intitulado "Web Semântica: um novo formato de conteúdo para a Web que tem significado para computadores vai iniciar uma revolução de novas possibilidades". Sua proposta é fazer com que as máquinas tenham capacidade de entender o que o usuário deseja por meio de uma estruturação dos dados, que será explicada na próxima seção sobre Web Semântica, também conhecida como Web 3.0.
+
+
+%\begin{figure}[H]
+%\center
+%\fbox{\includegraphics[scale=0.6]{images/evolucaoweb.jpg}}
+%\caption{Gráfico de evolução da World Wide Web. Fonte: \ref{novaspivack2007}}
+%\label{fig:webevolution}
+%\end{figure}
+
+
+\section{Web Semântica}
+
+"Quais bandas inglesas de \textit{rock and roll}, formadas nos anos 80 e que já tocaram no \textit{Rock In Rio}?". Este é um tipo busca que demanda uma compreensão semântica da frase. Um motor de busca precisaria entender que a busca se refere a grupos musicais oriundos da Inglaterra, que por sua vez é um país. Também precisaria compreender que "anos 80" é um período entre 1980 e 1989, que \textit{rock and roll} é um estilo musical e \textit{Rock In Rio} é um evento de \textit{rock and roll}. Além de compreender o sentido da frase, o buscador precisaria cruzar todas essas informações a fim de encontrar o resultado esperado pelo usuário. Este é um tipo de tarefa que as ferramentas de busca encontradas hoje não são capazes de fazer, pois elas se limitam a uma análise sintática, não semântica.
+
+Além de se propor a resolver problemas de recuperação da informação, como o apresentado acima, a Web Semântica vem colaborando para outras aplicações, tais como a integração de dados, representação e análise do conhecimento, serviços de catalogação, redes sociais, entre outras.
+
+\begin{quote}
+"A proposta da Web Semântica é estender os princípios dos documentos da web para os dados. Os dados podem ser acessados usando a arquitetura Web (URI por exemplo), e estar relacionados uns com os outros da mesma forma que os documentos já são. Isso significa também criar uma plataforma comum que permita o compartilhamento e a reutilização dos dados por meio das fronteiras das aplicações, empresas e comunidades, podendo ser processados automaticamente por ferramentas, bem como manualmente, inclusive revelando novos relacionamentos possíveis entre porções de dados." Tradução livre do autor de (http://www.w3.org/2001/sw/SW-FAQ)
+\end{quote}
+
+Segundo a enciclopédia livre, Wikipédia, a palavra semântica, tem origem grega \textit{s\={e}mantiká}, podendo ser traduzida como o estudo do significado, e é utilizando a semântica que Berners-Lee propõe estruturar as informações da Web, com o objetivo de transferir a responsabilidade de interpretação da informação do homem, para a máquina \cite{breitman2005}. Para isso, os dados da Web precisam estar semanticamente estruturados por meio de uma camada de significado dos dados, os metadados. Os metadados podem ser entendidos como "dados sobre dados", pois trazem informações que descrevem os dados. Na Web Semântica, os metadados são representados com o modelo de dados RDF, explanado na seção seguinte.
+
+
+\section{RDF}
+
+De acordo com (Klyne et al. 2004), o RDF (\textit{Resource Description Framework}) é um modelo de dados simples baseado em grafo dirigido rotulado nos nodos e arcos, projetado para uso no contexto da Web. Um recurso ou conjunto de dados, é representado por triplas compostas de um sujeito, um predicado e um objeto, simulando a representação de uma frase em linguagem natural. 
+
+Gramaticamente, numa oração, o sujeito é o responsável por realizar ou sofrer uma ação ou estado. O predicado é tudo aquilo que se informa sobre o sujeito e estruturado em torno de um verbo. Por fim, o objeto é o termo da oração que completa o sentido de um verbo. Por exemplo, na frase "Metallica é uma banda de \textit{rock and roll}", Metallica é o sujeito da frase, "é uma banda" trata-se do predicado e "de rock and roll" o objeto  que complementa o verbo. Na Web Semântica os dados estão estruturados da mesma forma, onde o sujeito é o recurso (identificado por URI), o predicado é a propriedade e o objeto é o valor da propriedade.
+
+Esse modelo permite descrever entidades como pessoas, locais e objetos, de uma maneira simples e flexível, e com um potencial de ligação superior ao de documentos HTML, pois ao invés de interligar apenas documentos, é possível interligar as próprias entidades que, inclusive, podem pertencer a diferentes fontes de dados. 
+
+[PEGAR ESSE GANCHO DE DIFERENTES FONTES DE DADOS PRA FALAR SOBRE LINKED DATA]
+
+
+
+RDF é o modelo de dados adotado como padrão pela W3C em 1999, que tem como função representar as informações da Web Semântica, de modo que tais informações possam ser trocadas entre as aplicações, sem que haja perda de sentido (MANOLA \& MILLER, 2004 apud SOUZA \& AQUINO 2010).
+
+
+conforme definido em (Klyne et al. 2004) 
+
+
+
+
+
+
+
+
+
+
+
+\section{SPARQL e DBpedia}
+% Mostrar exemplos meus em SPARQLWrapper
+
+\section{Linked Data}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+formando uma rede semântica, como pode ser visto no exemplo da figura \ref{fig:semantica}.
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.6]{images/semantica.png}
+\caption{Exemplo de uma rede semântica. Fonte: Wikipedia}
+\label{fig:semantica}
+\end{figure}
+
+
+
+Cada pa?gina passa a ter um enderec?o pro?prio chamado de Unified Resource Locator (URL), que e? um tipo especifico de URI, que atrave?s de links de hipertexto poderia ser relacionado com outra pa?gina, como um i?ndice, possibilitando navegar entre as informac?o?es (RAGGETT et al., 1998).
+
+
+Em 1989, Tim Berners-Lee inventou a World Wide Web 
+
+
+Para discorrer sobre a Web Semântica, é necessário conhecer um pouco da história da Internet
+
+A Web vem passando por muitas evoluções tecnológicas ao longo do tempo e que permitiram uma interação 
+
+A Web Semântica também é conhecida como Web 3.0, termo criado pelo jornalista John Markoff do \textit{New York Times} \cite{johnmarkoff2006}, por ser uma evolução da Web 2.0, que por sua vez, é uma evolução da Web 1.0.
+
+A Web, desde seu princípio, foi 
+
+
+
+Sendo assim, a Web Semântica é a terceira grande mudança de paradigma da Internet e u
+
+. A primeira mudança foi marcada pelos grandes portais, onde grandes empresas eram responsáveis por gerar grande parte do conteúdo da Web.
+
+
+%http://pt.wikipedia.org/wiki/Sem%C3%A2ntica
+
+%BLATTMANN, U.; SILVA, F. C. C. da. Colaborac?a?o e interac?a?o na web 2.0 e biblioteca 2.0. Revista ACB: Biblioteconomia em Santa Catarina, Floriano?polis, v. 12, n. 2, p. 191-215, jul./dez., 2007.
+
+%http://www.scientificamerican.com/article.cfm?id=the-semantic-web
+
+\section{Redes complexas}
+
+\section{Ferramentas de Análise}
