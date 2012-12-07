@@ -1,4 +1,0 @@
-sparql = SPARQLWrapper("http://dbpedia.org/sparql")
-sparql.setQuery("SELECT * WHERE { ?s ?p ?o } LIMIT 10")
-sparql.setReturnFormat(JSON)
-results = sparql.query().convert()

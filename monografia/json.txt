@@ -1,0 +1,12 @@
+{ "bandas": [
+    {
+      "id": 1,
+      "nome": "Metallica",
+      "genero": "Rock and Roll"
+    },
+    {
+      "id": 2,
+      "nome": "U2",
+      "genero": "Rock and Roll"
+    },
+]}

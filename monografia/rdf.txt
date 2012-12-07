@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:ns4="http://dbpedia.org/ontology/" 
+  xmlns:foaf="http://xmlns.com/foaf/0.1/" >
+  <rdf:type rdf:resource="http://dbpedia.org/ontology/Band" />
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Metallica">
+    <foaf:name xml:lang="en">Metallica</foaf:name>
+    <ns4:genre rdf:resource="http://dbpedia.org/resource/Heavy_metal_music" />
+  </rdf:Description>
+</rdf:RDF>

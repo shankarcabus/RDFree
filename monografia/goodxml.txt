@@ -1,0 +1,4 @@
+<banda id="1">
+  <nome> Metallica </nome>
+  <genero> Rock and roll </genero>
+</banda>

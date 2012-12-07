@@ -1,0 +1,12 @@
+<bandas>
+  <banda>
+    <id>1</id>
+    <nome> Metallica </nome>
+    <genero> Rock and roll </genero>
+  </banda>
+  <banda>
+    <id>2</id>
+    <nome> U2 </nome>
+    <genero> Rock and roll </genero>
+  </banda>
+</bandas>

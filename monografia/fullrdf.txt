@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:ns3="http://live.dbpedia.org/property/" xmlns:ns4="http://live.dbpedia.org/ontology/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dcterms="http://purl.org/dc/terms/" >
+  <rdf:Description rdf:about="http://en.wikipedia.org/wiki/Metallica">
+    <foaf:primaryTopic rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Kirk_Hammett">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Voivod_%28band%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Bob_Rock">
+    <ns3:title rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/James_Hetfield">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Rick_Rubin">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Jim_Martin_%28musician%29">
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Slayer">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Megadeth">
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Rock_Star_Supernova">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Anthrax_%28band%29">
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Fear_Factory">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Flotsam_and_Jetsam_%28band%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Infectious_Grooves">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Black_Label_Society">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Exodus_%28band%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Armored_Saint">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Greg_Fidelman">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Leather_Charm">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Sword">
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Papa_Wheelie">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Mass_Mental">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica">
+    <rdf:type rdf:resource="http://live.dbpedia.org/ontology/Agent" />
+    <rdf:type rdf:resource="http://schema.org/MusicGroup" />
+    <rdf:type rdf:resource="http://schema.org/Organization" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdf:type rdf:resource="http://live.dbpedia.org/ontology/Organisation" />
+    <rdf:type rdf:resource="http://live.dbpedia.org/ontology/Band" />
+    <rdfs:label xml:lang="en">Metallica</rdfs:label>
+    <rdfs:comment xml:lang="en">Metallica /məˈtælɪkə/ is an American heavy metal band from Los Angeles, California, whose releases include fast tempos, instrumentals, and aggressive musicianship that placed them as one of the founding &quot;big four&quot; of thrash metal alongside Slayer, Megadeth, and Anthrax. They formed in 1981 when James Hetfield responded to an advertisement that drummer Lars Ulrich had posted in a local newspaper.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Metallica" />
+    <ns3:caption xml:lang="en">Robert Trujillo, Kirk Hammett, Lars Ulrich and James Hetfield, band&#39;s current members.</ns3:caption>
+    <ns3:filename xml:lang="en">Metallica - Sad But True.ogg</ns3:filename>
+    <ns3:filename xml:lang="en">Metallica - Purify.ogg</ns3:filename>
+    <ns3:filename xml:lang="en">Metallica - Damage Inc.ogg</ns3:filename>
+    <ns3:landscape xml:lang="en">yes</ns3:landscape>
+    <ns3:description xml:lang="en">&quot;Damage Inc.&quot; , demonstrating Metallica&#39;s fast tempo, and aggressive musicianship featured in early releases</ns3:description>
+    <ns3:description xml:lang="en">&quot;Sad but True&quot;  Robert Palmer of Rolling Stone believed the band abandoned fast tempos to expand its music and expressive range in 1991</ns3:description>
+    <ns3:description xml:lang="en">&quot;Purify&quot; , demonstrating Metallica&#39;s new musical approach with no guitar solos, a &quot;raw unpolished&quot; sound, and Ulrich&#39;s snare drum</ns3:description>
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Musical_groups_from_Los_Angeles,_California" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Music_of_the_San_Francisco_Bay_Area" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Musical_quartets" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Grammy_Award_winners" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Speed_metal_musical_groups" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Rock_and_Roll_Hall_of_Fame_inductees" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:American_hard_rock_musical_groups" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Thrash_metal_musical_groups_from_California" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Musical_groups_established_in_1981" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Kerrang!_Awards_winners" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Heavy_metal_musical_groups_from_California" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:American_thrash_metal_musical_groups" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Elektra_Records_artists" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Warner_Bros._Records_artists" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Megaforce_Records_artists" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Grammy_Award-winning_artists" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Vertigo_Records_artists" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Universal_Music_Group_artists" />
+    <dcterms:subject rdf:resource="http://live.dbpedia.org/resource/Category:Metallica" />
+    <foaf:name xml:lang="en">Metallica</foaf:name>
+    <foaf:depiction rdf:resource="http://upload.wikimedia.org/wikipedia/commons/3/3e/Metallica_live_London_2003-12-19.jpg" />
+    <ns4:bandMember rdf:resource="http://live.dbpedia.org/resource/Robert_Trujillo" />
+    <ns4:bandMember rdf:resource="http://live.dbpedia.org/resource/Lars_Ulrich" />
+    <ns4:bandMember rdf:resource="http://live.dbpedia.org/resource/Kirk_Hammett" />
+    <ns4:bandMember rdf:resource="http://live.dbpedia.org/resource/James_Hetfield" />
+    <ns3:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</ns3:yearsActive>
+    <ns3:background xml:lang="en">group_or_band</ns3:background>
+    <ns3:pastMembers rdf:resource="http://live.dbpedia.org/resource/Dave_Mustaine" />
+    <ns3:pastMembers rdf:resource="http://live.dbpedia.org/resource/Jason_Newsted" />
+    <ns3:pastMembers rdf:resource="http://live.dbpedia.org/resource/Cliff_Burton" />
+    <ns3:pastMembers rdf:resource="http://live.dbpedia.org/resource/Ron_McGovney" />
+    <ns4:background xml:lang="en">group_or_band</ns4:background>
+    <ns3:wikiPageUsesTemplate rdf:resource="http://live.dbpedia.org/resource/Template:Infobox_musical_artist" />
+    <ns3:wikiPageUsesTemplate rdf:resource="http://live.dbpedia.org/resource/Template:Listen" />
+    <ns4:wikiPageExternalLink rdf:resource="http://www.metallica.com" />
+    <ns3:name xml:lang="en">Metallica</ns3:name>
+    <ns3:genre xml:lang="en">Heavy metal, thrash metal,  speed metal</ns3:genre>
+    <ns3:origin xml:lang="en">Los Angeles, California, United States</ns3:origin>
+    <ns4:genre rdf:resource="http://live.dbpedia.org/resource/Thrash_metal" />
+    <ns4:genre rdf:resource="http://live.dbpedia.org/resource/Heavy_metal_music" />
+    <ns4:genre rdf:resource="http://live.dbpedia.org/resource/Speed_metal" />
+    <ns4:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1981-01-01T00:00:00+02:00</ns4:activeYearsStartYear>
+    <ns4:recordLabel rdf:resource="http://live.dbpedia.org/resource/Megaforce_Records" />
+    <ns4:recordLabel rdf:resource="http://live.dbpedia.org/resource/Universal_Music" />
+    <ns4:recordLabel rdf:resource="http://live.dbpedia.org/resource/Elektra_Records" />
+    <ns4:recordLabel rdf:resource="http://live.dbpedia.org/resource/Vertigo_Records" />
+    <ns3:label xml:lang="en">Elektra, Vertigo, Megaforce, Universal Music,</ns3:label>
+    <ns3:currentMembers rdf:resource="http://live.dbpedia.org/resource/Robert_Trujillo" />
+    <ns3:currentMembers rdf:resource="http://live.dbpedia.org/resource/Kirk_Hammett" />
+    <ns3:currentMembers rdf:resource="http://live.dbpedia.org/resource/Lars_Ulrich" />
+    <ns3:currentMembers rdf:resource="http://live.dbpedia.org/resource/James_Hetfield" />
+    <ns4:abstract xml:lang="en">Metallica /məˈtælɪkə/ is an American heavy metal band from Los Angeles, California, whose releases include fast tempos, instrumentals, and aggressive musicianship that placed them as one of the founding &quot;big four&quot; of thrash metal alongside Slayer, Megadeth, and Anthrax. They formed in 1981 when James Hetfield responded to an advertisement that drummer Lars Ulrich had posted in a local newspaper. As of 2003, the line-up features long-time lead guitarist Kirk Hammett (who joined the band in 1983) and bassist Robert Trujillo (a member since 2003) alongside Hetfield and Ulrich. Previous members of the band are lead guitarist Dave Mustaine (who went on to found the band Megadeth), and bassists Ron McGovney, Cliff Burton and Jason Newsted. The band also had a long collaboration with producer Bob Rock, who produced all of its albums from 1990 to 2003 and served as a temporary bassist between the departure of Newsted and the hiring of Trujillo. The band earned a growing fan-base in the underground music community and critical acclaim with its third album Master of Puppets (1986), described as one of the most influential and &quot;heavy&quot; thrash metal albums. Metallica achieved substantial commercial success with their eponymous fifth album (also known as The Black Album), which debuted at number one on the Billboard 200. With this release the band expanded its musical direction resulting in an album that appealed to a more mainstream audience. In 2000, Metallica was among a number of artists who filed a lawsuit against Napster for sharing the band&#39;s copyright-protected material for free without any band member&#39;s consent. A settlement was reached, and Napster became a pay-to-use service. Despite reaching number one on the Billboard 200, the release of St. Anger (2003) alienated many fans with the exclusion of guitar solos and the &quot;steel-sounding&quot; snare drum. A film titled Some Kind of Monster documented the recording process of St. Anger and the tensions within the band during that time. In 2009, Metallica was inducted into the Rock and Roll Hall of Fame. Metallica has released nine studio albums, three live albums, five extended plays, 24 music videos, and 45 singles. The band has won nine Grammy Awards, and has had five consecutive albums debut at number one on the Billboard 200, making Metallica the first band to do so; this record was later matched, and then surpassed, by the Dave Matthews Band. The band&#39;s 1991 album, Metallica, has sold over 15 million copies in the United States, and 28 million copies worldwide, which makes it the 25th-best-selling album in the country. In December 2009, it became the best-selling album of the SoundScan era, surpassing 1997&#39;s Come on Over by country artist Shania Twain. The band has sold more than 100 million albums worldwide as of the release of their latest album, Death Magnetic (2008). As of December 2009, Metallica is the fourth best-selling music artist since the SoundScan era began tracking sales on May 25, 1991, selling a total of 52,672,000 albums in the United States alone. Metallica has been working on their tenth studio album, which is due for release in early 2014.</ns4:abstract>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Metallica" />
+    <ns4:thumbnail rdf:resource="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Metallica_live_London_2003-12-19.jpg/200px-Metallica_live_London_2003-12-19.jpg" />
+    <ns3:imageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns3:imageSize>
+    <ns3:title xml:lang="en">&quot;Purify&quot;</ns3:title>
+    <ns3:title xml:lang="en">&quot;Damage Inc.&quot;</ns3:title>
+    <ns3:title xml:lang="en">&quot;Sad but True&quot;</ns3:title>
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Leather_Charm" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Lou_Reed" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/San_Francisco_Symphony" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Spastik_Children" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Trauma_(band)" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Bob_Rock" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Exodus_(band)" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Suicidal_Tendencies" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Black_Label_Society" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Voivod_(band)" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Megadeth" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Ozzy_Osbourne" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Echobrain" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Flotsam_and_Jetsam_(band)" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Flotsam_and_Jetsam_(band)" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Lou_Reed" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/San_Francisco_Symphony" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Spastik_Children" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Trauma_%28band%29" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Bob_Rock" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Exodus_(band)" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Flotsam_and_Jetsam_%28band%29" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Trauma_(band)" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Black_Label_Society" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Suicidal_Tendencies" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Voivod_(band)" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Echobrain" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Exodus_%28band%29" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Megadeth" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Ozzy_Osbourne" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Leather_Charm" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Flotsam_and_Jetsam_(band)" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Bob_Rock" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Voivod_(band)" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Echobrain" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Ozzy_Osbourne" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Lou_Reed" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Trauma_(band)" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Exodus_%28band%29" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Spastik_Children" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Black_Label_Society" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Trauma_%28band%29" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Flotsam_and_Jetsam_%28band%29" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Megadeth" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Leather_Charm" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/San_Francisco_Symphony" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Exodus_(band)" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Suicidal_Tendencies" />
+    <ns4:formerBandMember rdf:resource="http://live.dbpedia.org/resource/Dave_Mustaine" />
+    <ns4:formerBandMember rdf:resource="http://live.dbpedia.org/resource/Cliff_Burton" />
+    <ns4:formerBandMember rdf:resource="http://live.dbpedia.org/resource/Ron_McGovney" />
+    <ns4:formerBandMember rdf:resource="http://live.dbpedia.org/resource/Jason_Newsted" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Dave_Mustaine">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Suicidal_Tendencies">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Trauma_%28band%29">
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Phantasm_%28band%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/EZ-Street">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Nothing_Else_Matters">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/...And_Justice_for_All_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Blackened_%28song%29">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Pepper_Keenan">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Seek_&amp;_Destroy">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Fade_to_Black_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Welcome_Home_%28Sanitarium%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Harvester_of_Sorrow">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/For_Whom_the_Bell_Tolls_%28Metallica_song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Stone_Cold_Crazy">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Sad_but_True">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Unforgiven_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Wait_%28song%29">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Turn_the_Page_%28Bob_Seger_song%29">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Die,_Die_My_Darling">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/I_Disappear">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Last_Caress/Green_Hell">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Ecstasy_of_Gold">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Day_That_Never_Comes">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Cyanide_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/All_Nightmare_Long">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Broken,_Beat_&amp;_Scarred">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Hit_the_Lights_%28song%29">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Hesher_%28film%29">
+    <ns3:music rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicComposer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/King_Diamond_%28band%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Creeping_Death">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Disposable_Heroes_%28song%29">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Am_I_Evil%3F__Am_I_Evil%3F">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Disposable_Heroes">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Live_Earth">
+    <ns3:participation rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Stone_Cold_Crazy__Stone_Cold_Crazy">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Adam_Bomb_%28musician%29">
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Some_Kind_of_Monster_%28song%29__Some_Kind_of_Monster___1">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Nothing_Else_Matters__%2799__Live">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Echobrain">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Lars_Ulrich">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Lou_Reed">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Load_%28album%29">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Cliff_Burton">
+    <ns3:title rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Ron_McGovney">
+    <ns3:title rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/St._Anger">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Until_It_Sleeps">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Hero_of_the_Day">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/No_Leaf_Clover">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:chronology rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/ReLoad">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Robert_Trujillo">
+    <ns3:title rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Jason_Newsted">
+    <ns3:title rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Kill_%27Em_All">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Marianne_Faithfull">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/King_Diamond">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Joey_Jordison">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Nothing_Else_Matters__%2799_Live___1">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Sonic_Diary">
+    <ns3:extra rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Machine_Head_%28band%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Hevisaurus">
+    <ns3:influences rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Testament_%28band%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/John_Marshall_%28guitarist%29">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Mercyful_Fate">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Garage_Inc.">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Bastardolomey">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Los_Premios_MTV_Latinoam%C3%A9rica_2008">
+    <ns3:acts rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Battery_%28song%29">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Master_of_Puppets_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Orion_%28Metallica_song%29">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Orion_%28Metallica_Song%29">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Ride_the_Lightning">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Master_of_Puppets">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/...And_Justice_for_All_%28album%29">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Live_Shit:_Binge_&amp;_Purge">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/A_Year_and_a_Half_in_the_Life_of_Metallica">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Some_Kind_of_Monster_%28film%29">
+    <ns4:starring rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:starring rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Some_Kind_of_Monster_%28song%29">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Mechanix">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Ride_the_Lightning_%28song%29">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Jump_in_the_Fire">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Mechanix__The_Four_Horsemen___1">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Death_Magnetic">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:allMusic rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/2_of_One">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:chronology rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:starring rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Paradise_Lost_3:_Purgatory">
+    <ns4:musicComposer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Music_as_a_Weapon">
+    <ns3:extra rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Cliff_%27Em_All">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:chronology rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Classic_Albums:_Metallica_%E2%80%93_Metallica">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:starring rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/For_Those_About_to_Rock_%28film%29">
+    <ns4:starring rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:starring rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Swizz_Beatz_Presents_G.H.E.T.T.O._Stories">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:note rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Metallica_Collection">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Eye_of_the_Beholder_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Whiplash_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Videos_1989%E2%80%932004">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_%245.98_E.P.:_Garage_Days_Re-Revisited">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Breadfan__Eye_of_the_Beholder">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Big_4_Live_from_Sofia,_Bulgaria">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Hit_the_Lights_%28song%29__Hit_the_Lights___1">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Hit_the_Lights_%28song%29__Hit_the_Lights___2">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Good,_the_Bad_&amp;_the_Live">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Die,_Die_My_Darling__Die%2C_Die_My_Darling">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Die,_Die_My_Darling__Die%2C_Die_My_Darling___1">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Some_Kind_of_Woody">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Rocky_%28album%29">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Lulu_%28Lou_Reed_and_Metallica_album%29">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Shakira:_Live_from_Paris">
+    <ns3:writer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Tony_Hawk%27s_Underground_2">
+    <ns3:title rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Biker_Boyz_%28soundtrack%29">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Bleeding_Me">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Enter_Sandman">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/King_Nothing">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Turn_the_Page_%28Bob_Seger_song%29__Turn_the_Page__1">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Tuesday%27s_Gone">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Fuel_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica_%28disambiguation%29">
+    <ns4:wikiPageDisambiguates rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Woodstock_1999_%28album%29">
+    <ns3:music rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Bloody_Beetroots">
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica_discography">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Six_Feet_Down_Under_Part_II">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Crisix">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/My_Apocalypse">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Judas_Kiss">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Sick_of_the_Studio_%2707">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/One_%28Metallica_song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Live_at_Grimey%27s">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Beyond_Magnetic">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:allMusic rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Fran%C3%A7ais_Pour_Une_Nuit">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Turn_the_Page_%28Bob_Seger_song%29__Turn_the_Page___2">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/To_Live_Is_to_Die">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Graveyard_Classics_3">
+    <ns3:note rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Sydney_Figuracion">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Cunning_Stunts_%28video%29">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:chronology rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Six_Feet_Down_Under">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Memory_Remains">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Frantic_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Wherever_I_May_Roam">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/St._Anger_%28song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Don%27t_Tread_on_Me_%28Metallica_song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Better_than_You_%28Metallica_song%29">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Overkill_%28song%29__Overkill">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Stone_Cold_Crazy____1">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Overkill_%28song%29__Overkill___1">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Tony_Hawk%27s_Pro_Skater_HD">
+    <ns3:extra rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Unnamed_Feeling">
+    <ns3:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Nowhere_Else_to_Roam">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Overkill_%28Mot%C3%B6rhead_song%29">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Overkill_%28Mot%C3%B6rhead_song%29__Overkill___1">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Damaged_Justice">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Wherever_We_May_Roam_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Dana_Nielsen">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Call_of_Ktulu_%28song%29">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Monsters_of_Rock_Tour_1987">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Nothing_Else_Matters__%2799_Live__1">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/S%26M_%28album%29">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Escape_from_the_Studio_%2706">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Madly_in_Anger_with_the_World_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/2008_European_Vacation_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Summer_Sanitarium_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Poor_Re-Touring_Me_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/World_Magnetic_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Damage,_Inc._Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Poor_Touring_Me">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/M2K_Mini_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Ride_the_Lightning_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Summer_Sanitarium_Tour_2003">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Summer_Sanitarium_2003">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/2012_European_Black_Album_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Orgullo%2C_Pasi%C3%B3n%2C_y_Gloria%3A_Tres_Noches_en_la_Ciudad_de_M%C3%A9xico">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Alcohollica">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Alcoholica">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Lloyd_Grant">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica_%28band%29">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Bay_Area_Metallibangers">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica_%28music_group%29">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/MetallicA">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metalica">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallicats">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica.">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Tallica">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Mettalica">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/METALLICA">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica_%28Band%29">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metllica">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Mission_Metallica">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica_post-straight_era">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/MetallicA/Discography">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metalicca">
+    <ns4:wikiPageRedirects rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Ecstasy_of_Gold__The_Ecstasy_of_Gold__1">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Stone_Cold_Crazy__Stone_Cold_Crazy__1">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Broken%2C_Beat_%26_Scarred">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Guns_N&#39;_Roses/Metallica_Stadium_Tour">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Seek_%26_Destroy">
+    <ns4:musicalBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/WCW_Mayhem%3A_The_Music">
+    <ns3:extra rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Big_Four%3A_Live_from_Sofia%2C_Bulgaria">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Paradise_Lost_3%3A_Purgatory">
+    <ns3:music rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicComposer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Unforgiven_%28song%29__The_Unforgiven_III__1">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Re-Machined%3A_A_Tribute_to_Deep_Purple%27s_Machine_Head">
+    <ns3:extra rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Hunter/killer">
+    <ns3:associatedActs rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedMusicalArtist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:associatedBand rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Paradise_Lost_2%3A_Revelations">
+    <ns3:music rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicComposer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Paradise_Lost%3A_The_Child_Murders_at_Robin_Hood_Hills">
+    <ns3:music rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:musicComposer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Metallica%3A_Vinyl_Box_Set">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Quebec_Magnetic">
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/The_Mechanix__The_Four_Horsemen__1">
+    <ns4:producer rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+    <ns4:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://live.dbpedia.org/resource/Am_I_Evil%253F">
+    <ns3:artist rdf:resource="http://live.dbpedia.org/resource/Metallica" />
+  </rdf:Description>
+</rdf:RDF>

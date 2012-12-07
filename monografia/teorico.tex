@@ -19,7 +19,7 @@ A adoção da World Wide Web por universidades e laboratórios de física, fez com q
 \begin{figure}[H]
 \center
 \fbox{\includegraphics[scale=0.7]{images/web.png}}
-\caption{Gráfico de crescimento da quantidade de clientes da Web entre 1991 e 1994. Fonte: \ref{w3chistory2000}}
+\caption{Gráfico de crescimento da quantidade de clientes da Web entre 1991 e 1994. Fonte: \cite{w3chistory2000}}
 \label{fig:web}  
 \end{figure}
 
@@ -28,7 +28,7 @@ Entre 1999 e 2001, a utilização da Web continuou crescendo, mas agora com uma mo
 Além de informações como notícias, artigos e imagens, outras mídias começaram a surgir e a Web tornou-se também um meio de entretenimento, cercado de jogos, bate-papo, vídeos, entre outros. Dá-se inicio à popularização da Web, que traz consigo uma nova preocupação: dar ao usuário a melhor experiência possível na frente do computador. Então as tecnologias avançaram e surgiram ainda novas linguagens, navegadores, protocolos e tecnologias, como AJAX\footnote{Acrônimo em língua inglesa de \textit{Asynchronous Javascript and XML}, trata-se do uso metodológico de tecnologias como Javascript e XML, providas por navegadores, para tornar páginas Web mais interativas com o usuário, utilizando-se de solicitações assíncronas de dados.}, técnicas de usabilidade foram estudadas e aplicadas, as conexões de internet ficaram cada vez mais rápidas, os sítios cada vez mais atrativos e o usuário participativo. Começa a segunda grande mudança de paradigma da Web, denominada por \cite{oreilly2004} como Web 2.0 e também conhecida como Web colaborativa, pois o usuário deixa de ser apenas consumidor de informação, para se tornar um produtor de conteúdo. A interação agora faz parte da Web. É neste período que surgem os blogs (sítios cuja estrutura permite atualização rápida pelo usuário a partir de artigos), e sítios como Youtube, Facebook, Wikipedia, entre outros. 
 
 \begin{quote}
-É a passagem de uma rede estática para uma dinâmica e de colaboraçãp, onde administram grupos de trabalhos colaborativos e interdisciplinares. E? constituída de um conjunto de novos serviços e ferramentas baseadas em um enfoque de colaboração, de dinamismo, e de facilidade de transferência de informação em todos os suportes (texto, imagem, áudio e vídeo). Web 2.0 descreve os sites de serviços ou tecnologias que promovem a capacidade de compartilhar e colaborar na rede. \cite{borchani2007}(BORCHANI, 2007 apud SANTOS e ALVES, 2009, p.2).
+É a passagem de uma rede estática para uma dinâmica e de colaboraçãp, onde administram grupos de trabalhos colaborativos e interdisciplinares. E? constituída de um conjunto de novos serviços e ferramentas baseadas em um enfoque de colaboração, de dinamismo, e de facilidade de transferência de informação em todos os suportes (texto, imagem, áudio e vídeo). Web 2.0 descreve os sites de serviços ou tecnologias que promovem a capacidade de compartilhar e colaborar na rede. \cite{borchani2007}.
 \end{quote}
 
 Apesar do crescimento da Web e mudança de paradigma no que diz respeito à participação do usuário, uma coisa não mudou, a Web continua feita para ser entendida apenas pelo usuário. O que antes não parecia ser problema, agora começa a ficar preocupante, pois, com a facilidade para produzir conteúdo, o volume de informação cresce num ritmo ainda mais acelerado e desorganizado, dificultando a recuperação dessas informações espalhadas entre milhões de sítios. A figura \ref{fig:webusers} mostra a quantidade de usuários da Internet em milhões no período de 1995 à 2012.
@@ -63,33 +63,92 @@ Além de se propor a resolver problemas de recuperação da informação, como o apre
 "A proposta da Web Semântica é estender os princípios dos documentos da web para os dados. Os dados podem ser acessados usando a arquitetura Web (URI por exemplo), e estar relacionados uns com os outros da mesma forma que os documentos já são. Isso significa também criar uma plataforma comum que permita o compartilhamento e a reutilização dos dados por meio das fronteiras das aplicações, empresas e comunidades, podendo ser processados automaticamente por ferramentas, bem como manualmente, inclusive revelando novos relacionamentos possíveis entre porções de dados." Tradução livre do autor de (http://www.w3.org/2001/sw/SW-FAQ)
 \end{quote}
 
-Segundo a enciclopédia livre, Wikipédia, a palavra semântica, tem origem grega \textit{s\={e}mantiká}, podendo ser traduzida como o estudo do significado, e é utilizando a semântica que Berners-Lee propõe estruturar as informações da Web, com o objetivo de transferir a responsabilidade de interpretação da informação do homem, para a máquina \cite{breitman2005}. Para isso, os dados da Web precisam estar semanticamente estruturados por meio de uma camada de significado dos dados, os metadados. Os metadados podem ser entendidos como "dados sobre dados", pois trazem informações que descrevem os dados. Na Web Semântica, os metadados são representados com o modelo de dados RDF, explanado na seção seguinte.
+Segundo a enciclopédia livre, Wikipédia, a palavra semântica, tem origem grega \textit{s\={e}mantiká}, podendo ser traduzida como o estudo do significado, e é utilizando a semântica que Berners-Lee propõe estruturar as informações da Web, com o objetivo de transferir a responsabilidade de interpretação da informação do homem, para a máquina \cite{breitman2005}. Para isso, os dados da Web precisam estar semanticamente estruturados por meio de uma camada de significado dos dados, os metadados. Os metadados podem ser entendidos como "dados sobre dados", pois trazem informações que descrevem os dados. Na Web Semântica, os metadados são representados com o modelo de dados RDF, que define um padrão a ser utilizado na codificação XML. Os conceitos de XML e RDF serão explanados nas seções subsequente.
+
+
+\section{Metalinguagens}
+
+Como já foi citado anteriormente na seção de contextualização histórica, em 1990, Tim Berners-Lee coloca o projeto da \textit{World Wide Web} em prática construindo algumas ferramentas necessárias para seu funcionamento, entre elas uma linguagem de marcação de hipertexto, o HTML (\textit{HyperText Markup Language}). 
+
+O HTML trata-se de uma metalinguagem derivada da \textit{Standard Generalized Markup Language} (SGML), uma outra metalinguagem baseada na ideia de que documentos contêm estrutura e outros elementos semânticos que podem ser descritos sem que haja referência à forma como estes elementos são exibidos. Sua sintaxe é baseada em etiquetas (\textit{tags}), palavras encapsuladas pelos sinais '<' e '>'. As \textit{tags} descrevem os dados e comandos necessários para manipulação de um documento na Web e são pré-definidas num conjunto chamado DTD ou \textit{Document Type Definition}, que serve para o navegador como um dicionário das \textit{tags} válidas, seguido do comando a ser executado por cada \textit{tag}. Como cada \textit{browser} já possui o DTD pré-definido, a estrutura do HTML se torna rígida por não aceitar a criação de novas etiquetas. Então, para suprir as limitações do HTML, foi criado o XML (\textit{eXtensible Markup Language}) com o mesmo propósito de descrever o conteúdo semântico e os significados contextuais, além da estrutura e forma de exibição de documentos.
+
+O XML é uma recomendação da W3C\footnote{http://www.w3.org/} (\textit{World Wide Web Consortium}) e se assemelha bastante com o HTML pelo fato de também ser derivado do SGML, logo também utiliza \textit{tags} como padrão de marcação. Mas enquanto o HTML tem como objetivo controlar a forma com que os dados serão apresentados, o XML tem como foco descrever os dados contidos no documento. Desta forma, o XML se torna mais flexível que o HTML devido à possibilidade de adicionar novas \textit{tags} sem a necessidade de alterar o DTD. O interpretador (navegador ou outra aplicação) do XML aceita qualquer tipo de tag, desde que esteja no seu padrão sintático.
+
+O SGML e as linguagens derivadas dele, utilizam uma estrutura baseada em árvore, onde cada \textit{tag} representa um nó, que por sua vez, pode ou não ter outros nós.
+
+Para entender melhor a diferença entre HTML e XML, nos trechos de códigos \ref{html} e \ref{xml} é apresentada, respectivamente, o HTML e o XML.
+
+\lstinputlisting[language=HTML, label=html, caption={Exemplo de um código escrito em HTML}]{html.txt}
+
+\lstinputlisting[language=XML, label=xml, caption={Exemplo de um código escrito em XML para descrever bandas}]{xml.txt}
+
+
+No codigo \ref{html} é mostrado um trecho de código em HTML com duas \textit{tags}: \texttt{body} e \texttt{a}. A \textit{tag} \texttt{body} indica o início (\texttt{<body>}) e o fim (\texttt{</body>}) do corpo de um documento em HTML. Dentro do corpo do documento, é adicionada a \textit{tag} \texttt{a}, criando uma ligação (\textit{link}) para a URL "http://exemplo.com" definida pelo atributo \texttt{href}.
+
+Parecido com o HTML, o código \ref{xml} apresenta um trecho um XML. Na primeira linha é iniciado um nó "bandas", composto por duas bandas (dois nós), cada uma com três nós: id (identificador), nome e gênero. No XML também é possível utilizar atributos nas \textit{tags}, mas, devido à liberdade dada pela linguagem, pode haver interpretação dúbia quanto à utilização de uma propriedade ou de um nó. Desta forma, uma banda poderia ser descrita utilizando somente atributos, como é mostrado no código \ref{badxml}:
+
+\lstinputlisting[language=XML, label=badxml, caption={Exemplo de um código escrito em XML mal utilizado}]{badxml.txt}
+
+A abordagem apresentada no código \ref{badxml}, apesar de sintaticamente correta, não é considerada uma boa prática, pois as propriedades tem por objetivo descrever o dado (metadado), não representar novos dados. Por isso, a abordagem mais correta para este caso seria a apresentada no código \ref{goodxml}, onde somente o \texttt{id} da banda é uma propriedade, afinal, trata-se de um metadado.
+
+\lstinputlisting[language=XML, label=goodxml, caption={Exemplo de um código escrito em XML utilizando boas práticas}]{goodxml.txt}
+
+Segundo Fogg et al. 2001, um \textit{website} lento perde sua credibilidade. A Amazon.com\footnote{http://amazon.com} tem um aumento de 1\% nas vendas a cada 100 milissegundos que são diminuídos do tempo de carregamento da página \cite{kohavi2007}. Sendo assim, a velocidade na Internet é um fator decisivo para o sucesso ou fracasso de um negócio. Devida a isso, o XML vem perdendo espaço na Web como uma linguagem para transferência de dados. Sua sintaxe é verbosa, repleta de caracteres de controle que consomem preciosos milissegundos durante uma transferência de arquivo na Internet. Então, um outro formato tem sido utilizado para troca de dados, o JSON (\textit{JavaScript Object Notation}) ou Notação de Objetos \textit{JavaScript}:
+
+JSON é uma formatação leve de troca de dados. Para seres humanos, é fácil de ler e escrever. Para máquinas, é fácil de interpretar e gerar [...] JSON é em formato texto e completamente independente de linguagem, pois usa convenções que são familiares às linguagens C e familiares, incluindo C++, C\#, Java, JavaScript, Perl, Python e muitas outras. Estas propriedades fazem com que JSON seja um formato ideal de troca de dados. \cite{json}
+
+
+O JSON é constituído de apenas duas estruturas: chave-valor e lista. A estrutura chave-valor, também conhecida como dicionário, define uma estrutura baseada em dados associados à uma chave única e sua sintaxe segue o padrão \texttt{\{"chave" : "valor"\}}. A lista ou array, é uma estrutura de dados linear e ordenada, que pode armazenar diferentes tipos de dados, contidos entre cochetes: \texttt{["dado1", "dado2"]}. Transcrevendo o código \ref{xml} em XML para JSON, é possível observar sua característica sucinta, como pode ser visto no codigo \ref{json}.
+
+\lstinputlisting[language=XML, label=json, caption={Exemplo de um código escrito em JSON}]{json.txt}
+
+Na linha 1 do código \ref{json} é iniciado um dicionário com a chave "bandas", que possui como valor uma lista de dicionários.
+Comparando a quantidade de caracteres dos códigos \ref{xml} e \ref{json}, que transmitem a mesma mensagem, a formatação em JSON possui 52 caracteres a menos que os 164 caracteres da formatação em XML, o que representa uma redução de 32\%.
 
 
 \section{RDF}
 
-De acordo com (Klyne et al. 2004), o RDF (\textit{Resource Description Framework}) é um modelo de dados simples baseado em grafo dirigido rotulado nos nodos e arcos, projetado para uso no contexto da Web. Um recurso ou conjunto de dados, é representado por triplas compostas de um sujeito, um predicado e um objeto, simulando a representação de uma frase em linguagem natural. 
+Devido à interação entre o usuário e a Web provida pela Web 2.0, como foi mostrado na primeira seção deste capítulo, a quantidade de documentos na Web cresceu numa proporção assustadora e desorganizada, dificultando a tarefa de recuperação de informações. Então o RDF surgiu com a proposta de suprir essa deficiência e tornar a Web um ambiente organizado.
 
-Gramaticamente, numa oração, o sujeito é o responsável por realizar ou sofrer uma ação ou estado. O predicado é tudo aquilo que se informa sobre o sujeito e estruturado em torno de um verbo. Por fim, o objeto é o termo da oração que completa o sentido de um verbo. Por exemplo, na frase "Metallica é uma banda de \textit{rock and roll}", Metallica é o sujeito da frase, "é uma banda" trata-se do predicado e "de rock and roll" o objeto  que complementa o verbo. Na Web Semântica os dados estão estruturados da mesma forma, onde o sujeito é o recurso (identificado por URI), o predicado é a propriedade e o objeto é o valor da propriedade.
+De acordo com (Klyne et al. 2004), o RDF (\textit{Resource Description Framework}) é um modelo de dados simples e baseado em grafo direcionado e rotulado nos vértices e arestas, onde os vértices representam os conceitos e as arestas o relacionamento entre conceitos. 
+
+O RDF estabelece um padrão de metadados para ser embutido na codificação XML, utilizando a ideia de descrever os dados e os metadados por meio de um esquema de triplas compostas por um sujeito, um predicado e um objeto, simulando a representação de uma frase em linguagem natural. 
+
+Gramaticalmente, numa oração, o sujeito é o responsável por realizar ou sofrer uma ação ou estado. O predicado é tudo aquilo que se informa sobre o sujeito e estruturado em torno de um verbo. Por fim, o objeto é o termo da oração que completa o sentido de um verbo. Na frase "Metallica é uma banda de \textit{rock and roll}", Metallica é o sujeito da frase, "é uma banda" o predicado e "de rock and roll" o objeto  que complementa o verbo. Na Web Semântica os dados estão estruturados da mesma forma, onde o sujeito é um recurso (identificado por uma URI), o predicado é a propriedade do recurso e o objeto é o valor da propriedade.
 
 Esse modelo permite descrever entidades como pessoas, locais e objetos, de uma maneira simples e flexível, e com um potencial de ligação superior ao de documentos HTML, pois ao invés de interligar apenas documentos, é possível interligar as próprias entidades que, inclusive, podem pertencer a diferentes fontes de dados. 
 
-[PEGAR ESSE GANCHO DE DIFERENTES FONTES DE DADOS PRA FALAR SOBRE LINKED DATA]
+%[PEGAR ESSE GANCHO DE DIFERENTES FONTES DE DADOS PRA FALAR SOBRE LINKED DATA]
 
-
-
+\begin{quote}
 RDF é o modelo de dados adotado como padrão pela W3C em 1999, que tem como função representar as informações da Web Semântica, de modo que tais informações possam ser trocadas entre as aplicações, sem que haja perda de sentido (MANOLA \& MILLER, 2004 apud SOUZA \& AQUINO 2010).
+\end{quote}
+
+Além da estrutura em triplas, o RDF utiliza padrões de metadados, chamados de \textit{RDF Schema} e definidos por meio de \textit{namespaces}.
+		
+Como o RDF não fornece mecanismos para definição de classes e propriedades de um domínio específico, foi desenvolvida uma linguagem para especificação de vocabulário RDF, o \textit{RDF Schema} (BRICKLEY \& GUHA, 2004), que funciona como uma extensão semântica do RDF, fornece mecanismos não apenas para definir classes, propriedades dos recursos e tipos dos recursos, como também o relacionamento entre essas propriedades e outros recursos. (BRICKLEY \& GUHA, 2004).
+
+Vejamos o código \ref{rdf} de um exemplo de um modelo de dados em RDF para descrever uma banda utilizando triplas e \textit{RDF Schema}.
+
+\lstinputlisting[language=XML, label=rdf, caption={Exemplo de um código escrito em RDF}]{rdf.txt}
+
+O código \ref{rdf} é baseado em um arquivo RDF retirado da DBpedia\footnote{http://dbpedia.org}, por isso os recursos possuem URI com domínio dbpedia.org. O arquivo original foi adaptado neste exemplo para fins didáticos, mas pode ser encontrado na íntegra no apêndice deste trabalho.
 
 
-conforme definido em (Klyne et al. 2004) 
+A linha 1 especifica a codificação e versão do XML e a linha 2 declara a abertura do bloco \texttt{<rdf:RDF>}. Em seguida, as linhas 3 à 5 declaram os atributos xmlns (\textit{XML namespace}), com os prefixos \texttt{rdf}, \texttt{ns4} e \texttt{foaf}. O \textit{namespace} \texttt{rdf} possui propriedades padrões e comuns ao modelo RDF, tais como \textit{resource}, \textit{about}, \textit{type}, entre outros. O \textit{namespace} \texttt{ns4} é um conjunto de propriedades referentes à ontologia em geral, enquanto o \texttt{foaf}\footnote{http://xmlns.com/foaf/spec/} (\textit{friend of a friend}) define um vocabulário de ontologias para descrever pessoas. A linha 6 indica o tipo do recurso. A linha 7 indica, através da \textit{tag} \texttt{<rdf:Description>} qual recurso será descrito, enquanto o \textit{namespace} \texttt{rdf:about} indica o recurso, neste caso representado pela URI http://dbpedia.org/ontology/Band. Na linha 8, é utilizado o \texttt{foaf} para indicar o nome do recurso e na linha 9 o \texttt{ns4} para indicar o gênero musical. Por fim, nas linhas 10 e 11 são definidas as \textit{tags} de encerramento, abertas nas linhas 7 e 2, respectivamente.
 
+Utilizando as informações contidas no exemplo, aplicações que utilizam este modelo podem entender a informação da seguinte forma:
 
+"O documento http://dbpedia.org/resource/Metallica é uma banda cujo o nome é 'Metallica' e pertence ao gênero musical 'http://dbpedia.org/resource/Heavy\_metal\_music'".
 
+A mesma sentença do exemplo também pode ser representada graficamente utilizando vértices e arestas, respectivamente, recursos e propriedades, como apresentado na figura \ref{fig:rdf}.
 
-
-
-
-
+\begin{figure}[H]
+\center
+\fbox{\includegraphics[scale=0.5]{images/rdf.png}}
+\caption{Representação gráfica do modelo em RDF apresentado no código \ref{rdf}}
+\label{fig:rdf}
+\end{figure}
 
 
 
@@ -98,73 +157,16 @@ conforme definido em (Klyne et al. 2004)
 
 \section{Linked Data}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-formando uma rede semântica, como pode ser visto no exemplo da figura \ref{fig:semantica}.
-
-\begin{figure}[H]
-\center
-\includegraphics[scale=0.6]{images/semantica.png}
-\caption{Exemplo de uma rede semântica. Fonte: Wikipedia}
-\label{fig:semantica}
-\end{figure}
-
-
-
-Cada pa?gina passa a ter um enderec?o pro?prio chamado de Unified Resource Locator (URL), que e? um tipo especifico de URI, que atrave?s de links de hipertexto poderia ser relacionado com outra pa?gina, como um i?ndice, possibilitando navegar entre as informac?o?es (RAGGETT et al., 1998).
-
-
-Em 1989, Tim Berners-Lee inventou a World Wide Web 
-
-
-Para discorrer sobre a Web Semântica, é necessário conhecer um pouco da história da Internet
-
-A Web vem passando por muitas evoluções tecnológicas ao longo do tempo e que permitiram uma interação 
-
-A Web Semântica também é conhecida como Web 3.0, termo criado pelo jornalista John Markoff do \textit{New York Times} \cite{johnmarkoff2006}, por ser uma evolução da Web 2.0, que por sua vez, é uma evolução da Web 1.0.
-
-A Web, desde seu princípio, foi 
-
-
-
-Sendo assim, a Web Semântica é a terceira grande mudança de paradigma da Internet e u
-
-. A primeira mudança foi marcada pelos grandes portais, onde grandes empresas eram responsáveis por gerar grande parte do conteúdo da Web.
-
-
-%http://pt.wikipedia.org/wiki/Sem%C3%A2ntica
-
-%BLATTMANN, U.; SILVA, F. C. C. da. Colaborac?a?o e interac?a?o na web 2.0 e biblioteca 2.0. Revista ACB: Biblioteconomia em Santa Catarina, Floriano?polis, v. 12, n. 2, p. 191-215, jul./dez., 2007.
-
-%http://www.scientificamerican.com/article.cfm?id=the-semantic-web
-
 \section{Redes complexas}
 
 \section{Ferramentas de Análise}
+
+
+formando uma rede semântica, como pode ser visto no exemplo da figura \ref{fig:semantica}.
+%
+%\begin{figure}[H]
+%\center
+%\includegraphics[scale=0.6]{images/semantica.png}
+%\caption{Exemplo de uma rede semântica. Fonte: Wikipedia}
+%\label{fig:semantica}
+%\end{figure}
